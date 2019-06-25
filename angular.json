@@ -1,0 +1,140 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "",
+  "projects": {
+    "forms-course": {
+      "projectType": "application",
+      "schematics": {
+        "@nrwl/workspace:component": {
+          "style": "scss"
+        }
+      },
+      "root": "apps/forms-course",
+      "sourceRoot": "apps/forms-course/src",
+      "prefix": "forms-course",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/apps/forms-course",
+            "index": "apps/forms-course/src/index.html",
+            "main": "apps/forms-course/src/main.ts",
+            "polyfills": "apps/forms-course/src/polyfills.ts",
+            "tsConfig": "apps/forms-course/tsconfig.app.json",
+            "assets": [
+              "apps/forms-course/src/favicon.ico",
+              "apps/forms-course/src/assets"
+            ],
+            "styles": ["apps/forms-course/src/styles.scss"],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/forms-course/src/environments/environment.ts",
+                  "with": "apps/forms-course/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "forms-course:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "forms-course:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "forms-course:build"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "apps/forms-course/tsconfig.app.json",
+              "apps/forms-course/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "apps/forms-course/jest.config.js",
+            "tsConfig": "apps/forms-course/tsconfig.spec.json",
+            "setupFile": "apps/forms-course/src/test-setup.ts"
+          }
+        }
+      }
+    },
+    "forms-course-e2e": {
+      "root": "apps/forms-course-e2e",
+      "sourceRoot": "apps/forms-course-e2e/src",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/forms-course-e2e/cypress.json",
+            "tsConfig": "apps/forms-course-e2e/tsconfig.e2e.json",
+            "devServerTarget": "forms-course:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "forms-course:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": "apps/forms-course-e2e/tsconfig.e2e.json"
+          }
+        }
+      }
+    }
+  },
+  "cli": {
+    "warnings": {
+      "typescriptMismatch": false,
+      "versionMismatch": false
+    },
+    "defaultCollection": "@nrwl/angular"
+  },
+  "schematics": {
+    "@nrwl/angular:application": {
+      "unitTestRunner": "jest",
+      "e2eTestRunner": "cypress"
+    },
+    "@nrwl/angular:library": {
+      "unitTestRunner": "jest"
+    }
+  },
+  "defaultProject": "forms-course"
+}
