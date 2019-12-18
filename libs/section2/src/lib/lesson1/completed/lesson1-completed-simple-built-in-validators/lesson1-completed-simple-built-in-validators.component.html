@@ -1,0 +1,5 @@
+<label for="email">My email is: </label>
+<input type="email" id="email" [formControl]="control" />
+
+<pre>errors: {{ control.errors | json }}</pre>
+<pre>status: {{ control.status | json }}</pre>

@@ -1,0 +1,14 @@
+::ng-deep .mat-tab-body-content {
+  display: grid !important;
+  place-items: center !important;
+
+  forms-course-completed-boolean-config-setting-form,
+  forms-course-completed-number-config-setting-form,
+  forms-course-completed-string-config-setting-form {
+    margin: 20px;
+  }
+}
+
+::ng-deep mat-spinner {
+  margin: 10px;
+}

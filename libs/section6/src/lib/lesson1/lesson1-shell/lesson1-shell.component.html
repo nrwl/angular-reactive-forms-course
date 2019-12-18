@@ -1,0 +1,88 @@
+<forms-course-instructions>
+  <p>
+    In this first lesson, we'll create a customer pagination form from the
+    MatButtonToggle component. See the provided template for details, and the
+    `pagination-form.component.ts` file. Helper functions and private methods
+    are provided for some of the implementation details.
+  </p>
+</forms-course-instructions>
+
+<forms-course-lesson-frame
+  title="EXERCISE: Creating a Pagination Form"
+  [lessonFrame]="paginationLessonFrame"
+>
+  <div class="working">
+    <forms-course-pagination-form
+      [totalPages]="totalPages.value"
+      [formControl]="paginationControl"
+    ></forms-course-pagination-form>
+    <pre>Pagination Control Value: {{ paginationControl.value }}</pre>
+    <label for="totalPages">Total Pages: </label>
+    <input id="totalPages" type="number" [formControl]="totalPages" />
+  </div>
+  <div class="completed">
+    <forms-course-lesson1-completed-pagination-form
+      [totalPages]="totalPages.value"
+      [formControl]="paginationControl"
+    ></forms-course-lesson1-completed-pagination-form>
+    <pre>Pagination Control Value: {{ paginationControl.value }}</pre>
+    <label for="totalPages">Total Pages: </label>
+    <input id="totalPages" type="number" [formControl]="totalPages" />
+  </div>
+</forms-course-lesson-frame>
+
+<forms-course-instructions>
+  <p>
+    Next, we'll create a grid component. We'll use the `ControlValueAccessor` to
+    expose the columns filter values (this way a consumer will be able to
+    provide a FormControl to manage these filters).
+  </p>
+  <p>
+    We'll also use the MatSort directive to expose an Observable of sorting info
+    via an @Output.
+  </p>
+  <p>
+    Finally, we'll use @Inputs to provide `heroes`, `columnFiltersTurnedOn`, and
+    `loading`.
+  </p>
+</forms-course-instructions>
+
+<forms-course-lesson-frame
+  title="EXERCISE: Creating a Hero Grid"
+  [lessonFrame]="heroGridLessonFrame"
+>
+  <div class="working">
+    <forms-course-hero-grid
+      [heroes]="heroes"
+      [columnFiltersTurnedOn]="columnFiltersTurnedOn.value"
+      [formControl]="columnFilters"
+      #workingGrid
+    >
+    </forms-course-hero-grid>
+    <pre>sort info: {{ workingGrid.sort | async | json }}</pre>
+    <label for="columnFilters">Column Filters: </label>
+    <input
+      type="checkbox"
+      id="columnFilters"
+      [formControl]="columnFiltersTurnedOn"
+    />
+    <pre>{{ columnFilters.value | json }}</pre>
+  </div>
+  <div class="completed">
+    <forms-course-lesson1-completed-hero-grid
+      [heroes]="heroes"
+      [columnFiltersTurnedOn]="columnFiltersTurnedOn.value"
+      [formControl]="columnFilters"
+      #grid
+    >
+    </forms-course-lesson1-completed-hero-grid>
+    <pre>sort info: {{ grid.sort | async | json }}</pre>
+    <label for="columnFilters">Column Filters: </label>
+    <input
+      type="checkbox"
+      id="columnFilters"
+      [formControl]="columnFiltersTurnedOn"
+    />
+    <pre>{{ columnFilters.value | json }}</pre>
+  </div>
+</forms-course-lesson-frame>

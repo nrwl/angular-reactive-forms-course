@@ -1,0 +1,28 @@
+mat-card {
+  max-width: 1250px;
+  /* background-color: rgba(0, 169, 244, 0.1); */
+  background-color: #f6f6f6;
+}
+
+.example {
+  display: grid;
+  place-items: center;
+  padding: 50px;
+  border-color: black;
+  border-width: 2px;
+  border-radius: 10px;
+  border-style: solid;
+}
+
+.tab-group-container {
+  width: 100%;
+}
+
+mat-card-content {
+  display: grid;
+  place-items: center;
+}
+
+mat-tab-group {
+  max-width: 1200px;
+}

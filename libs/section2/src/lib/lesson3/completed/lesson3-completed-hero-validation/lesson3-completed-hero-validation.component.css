@@ -1,0 +1,13 @@
+.stat-card {
+  width: 400px;
+}
+
+.stat-card.total-stats-error {
+  border-color: red;
+  border-width: 3px;
+  border-style: solid;
+}
+
+mat-form-field {
+  width: 100%;
+}

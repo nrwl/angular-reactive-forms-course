@@ -1,0 +1,53 @@
+<!-- <form [formGroup]="form">
+  <mat-tab-group>
+    <mat-tab label="General Settings">
+      <ng-container *ngFor="let settingInfo of generalSettings">
+        <ng-container
+          *ngTemplateOutlet="settingControl; context: { info: settingInfo }"
+        ></ng-container>
+      </ng-container>
+    </mat-tab>
+    <mat-tab label="Advanced Settings">
+      <ng-container *ngFor="let settingInfo of advancedSettings">
+        <ng-container
+          *ngTemplateOutlet="settingControl; context: { info: settingInfo }"
+        ></ng-container>
+      </ng-container>
+    </mat-tab>
+    <mat-tab label="Admin Settings">
+      <ng-container *ngFor="let settingInfo of adminSettings">
+        <ng-container
+          *ngTemplateOutlet="settingControl; context: { info: settingInfo }"
+        ></ng-container>
+      </ng-container>
+    </mat-tab>
+  </mat-tab-group>
+</form>
+
+<ng-template #settingControl let-info="info">
+  <ng-container [ngSwitch]="info.type">
+    <ng-container *ngSwitchCase="'boolean'">
+      <forms-course-completed-boolean-config-setting-form
+        [formControl]="form.get(info.name)"
+        [name]="info.name"
+        [storeValue]="storeValue[info.name]"
+      ></forms-course-completed-boolean-config-setting-form>
+    </ng-container>
+
+    <ng-container *ngSwitchCase="'number'">
+      <forms-course-completed-number-config-setting-form
+        [formControl]="form.get(info.name)"
+        [name]="info.name"
+        [storeValue]="storeValue[info.name]"
+      ></forms-course-completed-number-config-setting-form>
+    </ng-container>
+
+    <ng-container *ngSwitchCase="'string'">
+      <forms-course-completed-string-config-setting-form
+        [formControl]="form.get(info.name)"
+        [name]="info.name"
+        [storeValue]="storeValue[info.name]"
+      ></forms-course-completed-string-config-setting-form>
+    </ng-container>
+  </ng-container>
+</ng-template> -->

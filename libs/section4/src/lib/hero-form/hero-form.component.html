@@ -1,0 +1,73 @@
+<form [formGroup]="form">
+  <mat-card class="hero-card">
+    <fieldset>
+      <mat-card-title>
+        <legend>{{ form.value.name || 'Hero Form' }}</legend>
+      </mat-card-title>
+      <mat-card-content>
+        <mat-form-field appearance="outline">
+          <mat-label>Hero Name</mat-label>
+          <input matInput formControlName="name" />
+          <mat-error *ngIf="form.controls['name'].errors?.required">
+            Name is Required.
+          </mat-error>
+        </mat-form-field>
+
+        <form formGroupName="stats">
+          <mat-card
+            class="stat-card"
+            [class.total-stats-error]="form['errors']?.totalStatsTooHigh"
+          >
+            <fieldset>
+              <mat-card-title>
+                <legend>Hero Stats</legend>
+              </mat-card-title>
+
+              <mat-card-content>
+                <mat-form-field
+                  appearance="outline"
+                  *ngFor="let statName of stats"
+                >
+                  <mat-label>{{ statName | titlecase }}</mat-label>
+                  <input matInput type="number" [formControlName]="statName" />
+                  <mat-error
+                    *ngIf="
+                      form.controls['stats'].controls[statName].errors
+                        ?.min as minError
+                    "
+                  >
+                    {{ statName | titlecase }} is too low. The minimum allowed
+                    value is {{ minError.min }}.
+                  </mat-error>
+                  <mat-error
+                    *ngIf="
+                      form.controls['stats'].controls[statName].errors
+                        ?.max as maxError
+                    "
+                  >
+                    {{ statName | titlecase }} is too high. The maximum allowed
+                    value is {{ maxError.max }}.
+                  </mat-error>
+                </mat-form-field>
+                <mat-error
+                  class="total-stat-error"
+                  *ngIf="form['errors']?.totalStatsTooHigh as totalStatsError"
+                >
+                  <div>
+                    {{ form.get('name').value || 'Hero' }}'s total stats are too
+                    high.
+                  </div>
+                  <div>Maximum allowed total stats is {{ max }} and</div>
+                  <div>
+                    {{ form.get('name').value || 'this hero' }}'s total is
+                    {{ totalStatsError.totalStats }}.
+                  </div>
+                </mat-error>
+              </mat-card-content>
+            </fieldset>
+          </mat-card>
+        </form>
+      </mat-card-content>
+    </fieldset>
+  </mat-card>
+</form>

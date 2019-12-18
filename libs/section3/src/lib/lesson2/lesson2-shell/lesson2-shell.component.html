@@ -1,0 +1,45 @@
+<forms-course-instructions>
+  <p>
+    Another common use-case for the `ControlValueAccessor` is to encapsulate a
+    FormGroup and instead expose a FormControl that will manage a single object
+    (sometimes changing the format/shape of that object).
+  </p>
+
+  <p>
+    Let's see how that plays out in this example, where we'll wrap a FormGroup
+    that wraps two FormControls - one using a HTML date input element and the
+    other using an HTML time input element - and allow a user to interact with a
+    single FormControl that takes a
+    <a
+      href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date"
+      target="_blank"
+      class="alert-link"
+      >JS `Date` object</a
+    >
+    as it's value.
+  </p>
+</forms-course-instructions>
+
+<forms-course-lesson-frame
+  title="EXERCISE: Creating a DateTime picker"
+  [lessonFrame]="lessonFrame"
+>
+  <div class="completed">
+    <forms-course-lesson2-completed-date-time-picker
+      [formControl]="dateTimeControl"
+    >
+    </forms-course-lesson2-completed-date-time-picker>
+    <button (click)="toggleDisable()">
+      {{ dateTimeControl.enabled ? 'Disable' : 'Enable' }} Control
+    </button>
+    <pre>{{ dateTimeControl.value | date: 'medium' }}</pre>
+  </div>
+  <div class="working">
+    <forms-course-date-time-picker [formControl]="dateTimeControl">
+    </forms-course-date-time-picker>
+    <button (click)="toggleDisable()">
+      {{ dateTimeControl.enabled ? 'Disable' : 'Enable' }} Control
+    </button>
+    <pre>{{ dateTimeControl.value | date: 'medium' }}</pre>
+  </div>
+</forms-course-lesson-frame>

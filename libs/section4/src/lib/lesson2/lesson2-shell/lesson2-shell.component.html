@@ -1,0 +1,56 @@
+<forms-course-instructions>
+  <p>
+    In this lesson, use the component and utils found in the `hero-form`
+    directory of the `section4` lib (`libs/section4/src/lib/hero-form`) to
+    create a party form that itself implements the ControlValueAccessor
+    interface, complete with validity!
+  </p>
+
+  <p>
+    The template is already provided for you, simply add your implementation to
+    the `writeValue` and `registerOnChange` methods of the
+    `hero-party-form.component.ts` file.
+  </p>
+</forms-course-instructions>
+
+<forms-course-lesson-frame
+  title="EXERCISE: Party Form Group"
+  [lessonFrame]="lessonFrame"
+>
+  <div class="completed">
+    <form [formGroup]="partyForm" (submit)="submit()">
+      <forms-course-lesson2-completed-hero-party-form
+        formControlName="party"
+      ></forms-course-lesson2-completed-hero-party-form>
+      <button
+        mat-raised-button
+        color="primary"
+        type="submit"
+        [disabled]="!partyForm.valid"
+      >
+        Submit
+      </button>
+    </form>
+    <pre>Value: {{ partyForm.get('party').value | json }}</pre>
+    <pre>Errors: {{ partyForm.get('party').errors | json }}</pre>
+    <pre>Status: {{ partyForm.get('party').status | json }}</pre>
+  </div>
+  <div class="working">
+    <form [formGroup]="partyForm" (submit)="submit()">
+      <forms-course-hero-party-form
+        formControlName="party"
+      ></forms-course-hero-party-form>
+      <button
+        mat-raised-button
+        color="primary"
+        type="submit"
+        [disabled]="!partyForm.valid"
+      >
+        Submit
+      </button>
+    </form>
+    <pre>Value: {{ partyForm.get('party').value | json }}</pre>
+    <pre>Errors: {{ partyForm.get('party').errors | json }}</pre>
+    <pre>Status: {{ partyForm.get('party').status | json }}</pre>
+  </div>
+</forms-course-lesson-frame>

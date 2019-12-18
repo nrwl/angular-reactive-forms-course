@@ -1,0 +1,99 @@
+<forms-course-instructions>
+  <p>
+    For this example, let's revist the Hero Form we built in the previous
+    lesson, but in this form, let's build an entire party of heroes!
+  </p>
+  <p>
+    At the top level, we'll have a control to house the party's name as well as
+    another control for the party size. In addition we'll have a FormArray of
+    heroes whose size matches the value of the control. See the Party interface
+    for the exact shape of the data of our form.
+  </p>
+  <p>
+    Create a FormGroup to reflect this structure, and then bind it appropriately
+    to the skeleton in the html!
+  </p>
+</forms-course-instructions>
+
+<form [formGroup]="form">
+  <fieldset>
+    <legend>Party Form</legend>
+
+    <div>
+      <label for="party-name">Party Name: </label>
+      <input type="text" formControlName="name" id="party-name" />
+    </div>
+
+    <div>
+      <label for="party-size">Party Size: </label>
+      <select formControlName="partySize" id="party-size">
+        <option *ngFor="let size of possiblePartySizes" [ngValue]="size">{{
+          size
+        }}</option>
+      </select>
+    </div>
+
+    <div class="hero-container">
+      <form
+        *ngFor="
+          let heroGroup of form.controls['heroes'].controls;
+          let i = index
+        "
+        [formGroup]="heroGroup"
+        @fadeout
+        @fadein
+      >
+        <fieldset>
+          <legend>Hero Form</legend>
+
+          <label [for]="'name-' + i">Hero Name: </label>
+          <input type="text" formControlName="name" [id]="'name-' + i" />
+
+          <form formGroupName="stats">
+            <fieldset>
+              <legend>Hero Stats</legend>
+
+              <div>
+                <label [for]="'attack-' + i">Attack: </label>
+                <input
+                  type="number"
+                  formControlName="attack"
+                  [id]="'attack-' + i"
+                />
+              </div>
+
+              <div>
+                <label [for]="'defense-' + i">Defense: </label>
+                <input
+                  type="number"
+                  formControlName="defense"
+                  [id]="'defense-' + i"
+                />
+              </div>
+
+              <div>
+                <label [for]="'speed-' + i">Speed: </label>
+                <input
+                  type="number"
+                  formControlName="speed"
+                  [id]="'speed-' + i"
+                />
+              </div>
+
+              <div>
+                <label [for]="'health-' + i">Health: </label>
+                <input
+                  type="number"
+                  formControlName="health"
+                  [id]="'health-' + i"
+                />
+              </div>
+            </fieldset>
+          </form>
+        </fieldset>
+      </form>
+    </div>
+  </fieldset>
+</form>
+
+<pre>{{ form.value | json }}</pre>

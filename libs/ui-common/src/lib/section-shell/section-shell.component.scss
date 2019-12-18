@@ -1,0 +1,19 @@
+.active {
+  background-color: #00a9f4;
+  color: #fff;
+
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: darken(#00a9f4, 5);
+  }
+}
+
+a {
+  transition: 1s;
+}
+
+a[mat-raised-button]:hover {
+  text-decoration: none;
+  color: inherit;
+}

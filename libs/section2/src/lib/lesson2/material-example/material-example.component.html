@@ -1,0 +1,17 @@
+<form [formGroup]="form" (submit)="submit()">
+  <div>
+    <label for="word">Some Less Than 10-Character Input</label>
+    <input id="word" type="text" formControlName="input" />
+    <div>
+      <div>
+        Some input is required.
+      </div>
+      <div>
+        Input must be less than [[ max allowed length]] characters.
+      </div>
+    </div>
+  </div>
+  <button type="submit">
+    Submit
+  </button>
+</form>

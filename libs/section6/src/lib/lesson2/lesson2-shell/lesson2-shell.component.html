@@ -1,0 +1,36 @@
+<forms-course-instructions>
+  <p>
+    In this lesson, create a parent form that uses the pagination form we
+    created in lesson 1, to create a single form that manages a table's global
+    filter, toggles per-column filters, page size, and current page.
+  </p>
+
+  <p>
+    We'll use Material forms for the rest of these controls - see the commented
+    template for the expected template that we'll use here.
+  </p>
+</forms-course-instructions>
+
+<forms-course-lesson-frame
+  title="EXERCISE: Creating a Parent Form"
+  [lessonFrame]="lessonFrame"
+>
+  <div class="working">
+    <forms-course-table-form
+      [totalItems]="tableSizeControl.value"
+      [formControl]="tableFormControl"
+    ></forms-course-table-form>
+    <pre>tableFormControl value: {{ tableFormControl.value | json }}</pre>
+    <label for="tableSize">Table Size</label>
+    <input id="tableSize" type="number" [formControl]="tableSizeControl" />
+  </div>
+  <div class="completed">
+    <forms-course-lesson2-completed-table-form
+      [totalItems]="tableSizeControl.value"
+      [formControl]="tableFormControl"
+    ></forms-course-lesson2-completed-table-form>
+    <pre>tableFormControl value: {{ tableFormControl.value | json }}</pre>
+    <label for="tableSize">Table Size</label>
+    <input id="tableSize" type="number" [formControl]="tableSizeControl" />
+  </div>
+</forms-course-lesson-frame>

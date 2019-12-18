@@ -1,0 +1,25 @@
+<forms-course-instructions>
+  <p>
+    For this simple dynamic forms array, we'll start out with the html template
+    below. Note that the buttons in the template belwo are already wired up to
+    methods in the component class.
+  </p>
+  <p>
+    Let's first create a `FormArray` and bind it's value to the pre element at
+    the bottom, and use the `*ngFor` structural directive and form bindings
+    we've used in the past to bind our new `FormArray` to the template.
+  </p>
+  <p>
+    Finally, fill out the `addControl()` and `removeControl()` methods of the
+    component class so that we can add and remove controls to the `FormArray`.
+  </p>
+</forms-course-instructions>
+
+<div *ngFor="let control of form.controls; let i = index">
+  <label [for]="'control-' + i">Item {{ i }}: </label>
+  <input type="text" [id]="'control-' + i" [formControl]="control" />
+  <button (click)="removeControl(i)">Remove</button>
+</div>
+<button (click)="addControl()">Add New Control To The Array</button>
+
+<pre>Form Array value: {{ form.value | json }}</pre>

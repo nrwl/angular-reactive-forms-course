@@ -1,0 +1,15 @@
+<h1 mat-dialog-title>Changes Will Be Discarded</h1>
+<div mat-dialog-content>
+  <p>
+    Your changes will be discarded if you leave this page.
+  </p>
+  <p>
+    Are you sure you want to leave?
+  </p>
+</div>
+<div mat-dialog-actions>
+  <button mat-raised-button color="primary" (click)="leave()">Leave</button>
+  <button mat-raised-button (click)="cancel()" cdkFocusInitial>
+    Cancel
+  </button>
+</div>

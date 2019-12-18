@@ -1,0 +1,10 @@
+<mat-form-field
+  appearance="outline"
+  matBadge="!"
+  matBadgeColor="warn"
+  [matBadgeHidden]="formValueMatchesStoreValue$ | async"
+>
+  <mat-label>{{ name }}</mat-label>
+  <input matInput [formControl]="control" />
+  <mat-error *ngIf="control['errors']?.required">Required</mat-error>
+</mat-form-field>

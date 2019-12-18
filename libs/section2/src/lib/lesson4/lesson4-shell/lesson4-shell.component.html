@@ -1,0 +1,71 @@
+<forms-course-instructions>
+  <p>
+    In this lesson, we'll look at async validators and learn about the execution
+    order of synchronous vs. asynchronous validators.
+  </p>
+
+  <p>
+    The given form already has synchronous validators on the child forms to make
+    the various fields required and to have no numbers. There's also a
+    synchronous validator that on the FormGroup that will give an error if the
+    whole name is too long.
+  </p>
+
+  <p>
+    Use the `ApiService` already injected in the FullNameComponent to create an
+    async validator that will call our fake API to verify that the name given by
+    the user does not already exist in our system.
+  </p>
+
+  <p>
+    Try playing around with this example - what happens if we fail a synchronous
+    validator? Will the async validator still execute at all? What about the
+    valid/invalid/status properties of the FormGroup? Why might these details be
+    important?
+  </p>
+</forms-course-instructions>
+
+<forms-course-lesson-frame
+  title="EXERCISE: Validation Against a REST API"
+  [lessonFrame]="fullNameLessonFrame"
+>
+  <forms-course-full-name class="working"></forms-course-full-name>
+  <forms-course-lesson4-completed-full-name
+    class="completed"
+  ></forms-course-lesson4-completed-full-name>
+</forms-course-lesson-frame>
+
+<forms-course-instructions>
+  <p>
+    In this exercise, we'll see how we can use an async validator in conjunction
+    with an NgRx selector to validate a form against store contents!
+  </p>
+
+  <p>
+    In this simple example, we'll let a user submit names via a form. Once a
+    name is submitted, it is added to the store, and the form should then
+    validate any user input to give an error if the name already exists.
+  </p>
+
+  <p>
+    You can use the
+    <a
+      href="https://github.com/zalmoxisus/redux-devtools-extension"
+      target="_blank"
+      class="alert-link"
+      >Redux DevTools Chrome extension</a
+    >
+    to inspect the contents of your store, and checkout the store implementation
+    in the `libs/secion2/src/lib/+state` directory.
+  </p>
+</forms-course-instructions>
+
+<forms-course-lesson-frame
+  title="EXERCISE: Validation Against an NgRx Store"
+  [lessonFrame]="heroAdderLessonFrame"
+>
+  <forms-course-hero-adder class="working"></forms-course-hero-adder>
+  <forms-course-lesson4-completed-hero-adder
+    class="completed"
+  ></forms-course-lesson4-completed-hero-adder>
+</forms-course-lesson-frame>

@@ -1,0 +1,19 @@
+<mat-button-toggle-group (change)="userClick($event.value)">
+  <ng-container *ngIf="(paginationOptions$ | async) as paginationOptions">
+    <mat-button-toggle *ngIf="(showFirst$ | async)" [value]="1">
+      1
+      <span *ngIf="(showFirstElipsis$ | async)">...</span>
+    </mat-button-toggle>
+    <mat-button-toggle
+      *ngFor="let paginationOption of paginationOptions"
+      [value]="paginationOption"
+      [checked]="control.value === paginationOption"
+    >
+      {{ paginationOption }}
+    </mat-button-toggle>
+    <mat-button-toggle *ngIf="(showLast$ | async)" [value]="totalPages">
+      <span *ngIf="(showLastElipsis$ | async)">...</span>
+      {{ totalPages }}
+    </mat-button-toggle>
+  </ng-container>
+</mat-button-toggle-group>

@@ -1,0 +1,46 @@
+<forms-course-instructions>
+  <p>
+    In this exercise, we'll create our own
+    <a
+      href="https://angular.io/api/forms/ValidatorFn"
+      target="_blank"
+      class="alert-link"
+      >ValiditorFn</a
+    >.
+  </p>
+
+  <p>
+    Let's say for a hero, every stat must be within 0 and 20, and that the sum
+    of all 4 stats must be less than 60.
+  </p>
+
+  <p>
+    We'll provide for this exercise a `createSingleStatControl()` helper
+    function that we can use to create a FormControl for each of the relevant
+    stats. This will use built-in validators to accomplish this.
+  </p>
+
+  <p>
+    However to validate that the sum of all stats is less than 60, we'll have to
+    create our own validator. The signature is already provided in this example.
+    HINT: Be sure to inspect the docs for the ValidatorFn type to understand how
+    to property implement our validator!
+  </p>
+
+  <p>
+    The other interesting thing to consider for this exercise is how/where to
+    provide meaningfull feedback to the user if the heroValidtor should fail!
+  </p>
+</forms-course-instructions>
+
+<forms-course-lesson-frame
+  title="EXERCISE: Creating Custom Validation For The Hero Form"
+  [lessonFrame]="lessonFrame"
+>
+  <forms-course-hero-validation-2
+    class="working"
+  ></forms-course-hero-validation-2>
+  <forms-course-lesson3-completed-hero-validation
+    class="completed"
+  ></forms-course-lesson3-completed-hero-validation>
+</forms-course-lesson-frame>

@@ -1,0 +1,80 @@
+<form>
+  <fieldset>
+    <legend>Hero Form</legend>
+
+    <label for="name">Hero Name: </label>
+    <input type="text" id="name" />
+
+    <ng-container>
+      <fieldset>
+        <legend>Hero Stats</legend>
+
+        <div>
+          <label for="attack">Attack: </label>
+          <input type="number" id="attack" />
+        </div>
+
+        <div>
+          <label for="defense">Defense: </label>
+          <input type="number" id="defense" />
+        </div>
+
+        <div>
+          <label for="speed">Speed: </label>
+          <input type="number" id="speed" />
+        </div>
+
+        <div>
+          <label for="health">Health: </label>
+          <input type="number" id="health" />
+        </div>
+      </fieldset>
+    </ng-container>
+  </fieldset>
+</form>
+
+<hr />
+
+<table>
+  <tr>
+    <th>Control</th>
+    <th>errors</th>
+    <th>status</th>
+  </tr>
+  <tr>
+    <td>[parent]</td>
+    <td>
+      <pre>[[ insert parent errors here ]]</pre>
+    </td>
+    <td>
+      <pre>[[ insert parent status here ]]</pre>
+    </td>
+  </tr>
+  <tr>
+    <td>name</td>
+    <td>
+      <pre>[[ insert name errors here ]]</pre>
+    </td>
+    <td>
+      <pre>[[ insert name status here ]]</pre>
+    </td>
+  </tr>
+  <tr>
+    <td>stats</td>
+    <td>
+      <pre>[[ insert stats group errors here ]]</pre>
+    </td>
+    <td>
+      <pre>[[ insert stats group status here ]]</pre>
+    </td>
+  </tr>
+  <tr *ngFor="let stat of stats">
+    <td>stats.{{ stat }}</td>
+    <td>
+      <pre>[[ insert errors for the {{ stat }} control here ]]</pre>
+    </td>
+    <td>
+      <pre>[[ insert status for the {{ stat }} control here ]]</pre>
+    </td>
+  </tr>
+</table>

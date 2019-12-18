@@ -1,0 +1,25 @@
+<forms-course-instructions>
+  <p>
+    In this lesson, use table form and grid components to create a client-side
+    table.
+  </p>
+
+  <p>
+    Check out the resources in the `+state` directory for this section to help
+    with the functionality. There is an NgRx implementation in `+state`, but the
+    important part is to know that there's a selector called `heroSelector` that
+    will provide an Observable of all available heroes.
+  </p>
+</forms-course-instructions>
+
+<forms-course-lesson-frame
+  title="EXERCISE: Table With Client-Side Strategy"
+  [lessonFrame]="lessonFrame"
+>
+  <forms-course-client-side-table
+    class="working"
+  ></forms-course-client-side-table>
+  <forms-course-lesson3-completed-client-side-table
+    class="completed"
+  ></forms-course-lesson3-completed-client-side-table>
+</forms-course-lesson-frame>

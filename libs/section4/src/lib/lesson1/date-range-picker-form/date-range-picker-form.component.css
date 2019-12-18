@@ -1,0 +1,21 @@
+form {
+  border-style: solid;
+  border-width: 4px;
+  border-radius: 10px;
+  border-color: black;
+  padding: 10px;
+}
+
+form.error {
+  border-color: red;
+}
+
+.error-message {
+  margin-top: 10px;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 10px;
+  border-color: red;
+  padding: 5px;
+  background-color: rgba(255, 0, 0, 0.3);
+}

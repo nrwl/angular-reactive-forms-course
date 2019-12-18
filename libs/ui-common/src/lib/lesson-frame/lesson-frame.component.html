@@ -1,0 +1,53 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>{{ title }}</mat-card-title>
+  </mat-card-header>
+  <mat-card-content *ngIf="!collapsed" @fadeout @fadein>
+    <div class="example">
+      <ng-content
+        *ngIf="showCompleted; else showWorking"
+        select=".completed"
+      ></ng-content>
+      <ng-template #showWorking>
+        <ng-content select=".working"></ng-content>
+      </ng-template>
+    </div>
+    <div *ngIf="showSource" @fadeout @fadein class="tab-group-container">
+      <mat-tab-group @fadeout @fadein>
+        <mat-tab
+          *ngFor="
+            let fileToPreview of showCompleted
+              ? lessonFrame.completed
+              : lessonFrame.working
+          "
+          [label]="fileToPreview.fileName"
+        >
+          <forms-course-code-preview
+            [fileToPreview]="fileToPreview"
+          ></forms-course-code-preview>
+        </mat-tab>
+      </mat-tab-group>
+    </div>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-raised-button (click)="collapsed = !collapsed">
+      {{ collapsed ? 'Expand' : 'Collapse' }}
+    </button>
+    <button
+      mat-raised-button
+      *ngIf="!collapsed"
+      (click)="showCompleted = !showCompleted"
+    >
+      {{ showCompleted ? 'Show Working' : 'Show Completed' }}
+    </button>
+    <button
+      *ngIf="!collapsed"
+      @fadein
+      @fadeout
+      mat-raised-button
+      (click)="showSource = !showSource"
+    >
+      {{ showSource ? 'Hide' : 'Show' }} Source
+    </button>
+  </mat-card-actions>
+</mat-card>

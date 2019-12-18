@@ -15,7 +15,15 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@forms-course/section1": ["libs/section1/src/index.ts"],
+      "@forms-course/section2": ["libs/section2/src/index.ts"],
+      "@forms-course/ui-common": ["libs/ui-common/src/index.ts"],
+      "@forms-course/section5": ["libs/section5/src/index.ts"],
+      "@forms-course/section3": ["libs/section3/src/index.ts"],
+      "@forms-course/section4": ["libs/section4/src/index.ts"],
+      "@forms-course/section6": ["libs/section6/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

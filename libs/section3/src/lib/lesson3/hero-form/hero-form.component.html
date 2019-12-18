@@ -1,0 +1,28 @@
+<form>
+  <mat-card>
+    <mat-card-title>
+      <legend>Hero Form</legend>
+    </mat-card-title>
+    <mat-card-content>
+      <mat-form-field appearance="outline">
+        <mat-label>Hero Name</mat-label>
+        <input matInput />
+      </mat-form-field>
+
+      <form>
+        <mat-card class="stat-card">
+          <mat-card-title>
+            Hero Stats
+          </mat-card-title>
+
+          <div *ngFor="let statName of stats">
+            <mat-form-field appearance="outline">
+              <mat-label>{{ statName | titlecase }}</mat-label>
+              <input matInput type="number" />
+            </mat-form-field>
+          </div>
+        </mat-card>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</form>

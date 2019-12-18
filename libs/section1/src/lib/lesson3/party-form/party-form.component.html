@@ -1,0 +1,73 @@
+<forms-course-instructions>
+  <p>
+    For this example, let's revist the Hero Form we built in the previous
+    lesson, but in this form, let's build an entire party of heroes!
+  </p>
+  <p>
+    At the top level, we'll have a control to house the party's name as well as
+    another control for the party size. In addition we'll have a FormArray of
+    heroes whose size matches the value of the control. See the Party interface
+    for the exact shape of the data of our form.
+  </p>
+  <p>
+    Create a FormGroup to reflect this structure, and then bind it appropriately
+    to the skeleton in the html!
+  </p>
+</forms-course-instructions>
+
+<form>
+  <fieldset>
+    <legend>Party Form</legend>
+
+    <div>
+      <label for="party-name">Party Name: </label>
+      <input type="text" id="party-name" />
+    </div>
+
+    <div>
+      <label for="party-size">Party Size: </label>
+      <select id="party-size">
+        <option *ngFor="let size of possiblePartySizes">{{ size }}</option>
+      </select>
+    </div>
+
+    <div class="hero-container">
+      <form @fadeout @fadein>
+        <fieldset>
+          <legend>Hero Form</legend>
+
+          <label for="name-0">Hero Name: </label>
+          <input type="text" id="name-0" />
+
+          <form>
+            <fieldset>
+              <legend>Hero Stats</legend>
+
+              <div>
+                <label for="attack-0">Attack: </label>
+                <input type="number" id="attack-0" />
+              </div>
+
+              <div>
+                <label for="defense-0">Defense: </label>
+                <input type="number" id="defense-0" />
+              </div>
+
+              <div>
+                <label for="speed-0">Speed: </label>
+                <input type="number" id="speed-0" />
+              </div>
+
+              <div>
+                <label for="health-0">Health: </label>
+                <input type="number" id="health-0" />
+              </div>
+            </fieldset>
+          </form>
+        </fieldset>
+      </form>
+    </div>
+  </fieldset>
+</form>
+
+<pre>Put Form Value here!</pre>

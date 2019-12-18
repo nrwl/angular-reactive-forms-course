@@ -1,0 +1,41 @@
+<forms-course-instructions>
+  <p>
+    In the previous lesson, we looked at the mechanics of a `FormControl`. In
+    this section, we'll look at some details of a `FormGroup`, which is another
+    extension of the the `AbstractForm` abstract class.
+  </p>
+</forms-course-instructions>
+
+<forms-course-lesson-frame
+  [lessonFrame]="filteringAListFiles"
+  title="EXERCISE: Filtering a List"
+>
+  <forms-course-lesson2-completed-filtering-a-list
+    class="completed"
+  ></forms-course-lesson2-completed-filtering-a-list>
+  <forms-course-filtering-a-list
+    class="working"
+  ></forms-course-filtering-a-list>
+</forms-course-lesson-frame>
+
+<forms-course-instructions>
+  <p>
+    Note that `FormGroup`s when contructed take as an argument an object of
+    named `AbstractForm`s. As such, we can create a `FormGroup` that contains
+    both `FormControl`s and `FormGroup`s.
+  </p>
+
+  <p>
+    Let's see this in action in the next excerise!
+  </p>
+</forms-course-instructions>
+
+<forms-course-lesson-frame
+  [lessonFrame]="heroFormFiles"
+  title="EXERCISE: Hero Form"
+>
+  <forms-course-lesson2-completed-hero-form
+    class="completed"
+  ></forms-course-lesson2-completed-hero-form>
+  <forms-course-hero-form class="working"></forms-course-hero-form>
+</forms-course-lesson-frame>

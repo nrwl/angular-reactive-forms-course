@@ -1,0 +1,26 @@
+<div class="mat-elevation-z8">
+  <div
+    class="loading-shade"
+    *ngIf="loading && heroes && heroes.length !== 0"
+    [class.filters-on]="columnFiltersTurnedOn"
+  >
+    <mat-spinner></mat-spinner>
+  </div>
+  <table mat-table [dataSource]="heroes" matSort>
+    <ng-container *ngFor="let column of columns" [matColumnDef]="column">
+      <th mat-header-cell *matHeaderCellDef>
+        <div mat-sort-header>{{ column | titlecase }}</div>
+        <div class="filter" *ngIf="columnFiltersTurnedOn">
+          <mat-form-field appearance="outline">
+            <mat-label>Filter By {{ column | titlecase }}</mat-label>
+            <input matInput [formControl]="form.get(column)" />
+          </mat-form-field>
+        </div>
+      </th>
+      <td mat-cell *matCellDef="let hero">{{ hero[column] }}</td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="columns"></tr>
+    <tr mat-row *matRowDef="let row; columns: columns"></tr>
+  </table>
+</div>

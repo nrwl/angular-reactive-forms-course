@@ -1,0 +1,61 @@
+<forms-course-instructions>
+  <p>
+    Let's take a look at a common use-case for the `ControlValueAccessor`:
+    wrapping a `FormControl`!
+  </p>
+  <p>
+    The styling and provider for this form are already provided for you, so
+    let's go in and add our implementation for the required methods for the
+    `ControlValueAccessor` interface and see how it all works out!
+  </p>
+</forms-course-instructions>
+
+<forms-course-lesson-frame
+  title="EXERCISE: Creating a Custom Toggle"
+  [lessonFrame]="toggleLessonFrame"
+>
+  <div class="working">
+    <forms-course-toggle-form
+      [formControl]="toggleControl"
+    ></forms-course-toggle-form>
+    <pre>toggleControl's value: {{ toggleControl.value }}</pre>
+  </div>
+  <div class="completed">
+    <forms-course-lesson1-completed-toggle-form
+      [formControl]="toggleControl"
+    ></forms-course-lesson1-completed-toggle-form>
+    <pre>toggleControl's value: {{ toggleControl.value }}</pre>
+  </div>
+</forms-course-lesson-frame>
+
+<forms-course-instructions>
+  <p>
+    While it's a common use case for a custom `ControlValueAccessor` to wrap a
+    `FormControl`, that is in no way necessary as long as we properly implement
+    the interface!!
+  </p>
+  <p>
+    For an example of this, let's take a look at this "number rocker" control
+    below!
+  </p>
+</forms-course-instructions>
+
+<forms-course-lesson-frame
+  title="EXERCISE: Creating a Custom Number Rocker"
+  [lessonFrame]="numberPickerLessonFrame"
+>
+  <div class="working">
+    <forms-course-number-picker
+      [formControl]="numberControl"
+    ></forms-course-number-picker>
+    <pre>numberControl's value: {{ numberControl.value }}</pre>
+  </div>
+  <div class="completed">
+    <forms-course-lesson1-completed-number-picker
+      class="completed"
+      [formControl]="numberControl"
+    ></forms-course-lesson1-completed-number-picker>
+
+    <pre>numberControl's value: {{ numberControl.value }}</pre>
+  </div>
+</forms-course-lesson-frame>

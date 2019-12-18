@@ -1,0 +1,34 @@
+<mat-card *ngIf="(configSettingsFromStore$ | async) as configSettingsFromStore">
+  <mat-card-header>
+    <mat-card-title>Config Settings Wizard</mat-card-title>
+  </mat-card-header>
+  <mat-card-content *ngIf="control">
+    <forms-course-completed-wizard-form
+      [formControl]="control"
+      [storeValue]="configSettingsFromStore"
+    >
+    </forms-course-completed-wizard-form>
+  </mat-card-content>
+  <mat-card-actions>
+    <button
+      mat-raised-button
+      color="primary"
+      [disabled]="submitButtonDisabled$ | async"
+      (click)="confirmSave()"
+    >
+      <mat-spinner
+        *ngIf="(savePending$ | async); else submit"
+        diameter="25"
+      ></mat-spinner>
+      <ng-template #submit>Submit</ng-template>
+    </button>
+    <button
+      *ngIf="!(savePending$ | async)"
+      mat-raised-button
+      [disabled]="discardChangesButtonDisabled$ | async"
+      (click)="discardChanges()"
+    >
+      Discard Changes
+    </button>
+  </mat-card-actions>
+</mat-card>

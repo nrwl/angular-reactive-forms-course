@@ -1,0 +1,32 @@
+<forms-course-instructions>
+  <p>
+    Checkout the `colors` array that exists in our component's typescript code.
+    To start, let's use the contents of this array to dynamically create option
+    children for our select element via the `*ngFor` structural directive:
+  </p>
+</forms-course-instructions>
+
+<select [formControl]="favoriteColor">
+  <option>
+    Blue
+  </option>
+</select>
+
+<pre>Your favorite color is: {{ favoriteColor.value }}</pre>
+
+<hr />
+
+<forms-course-instructions>
+  <p>
+    We're techincally dynamic now, but there's no real mechanism provided by our
+    component to alter the potential options.
+  </p>
+  <p>
+    Let's change that! Create a control for the textarea element below and bind
+    it to the element. Then use the string `split` and `join` methods to set the
+    initial value of the FormControl, and to iterate via `*ngFor` structural
+    directive we used in the previous step!
+  </p>
+</forms-course-instructions>
+
+<textarea></textarea>

@@ -1,0 +1,28 @@
+<h1 mat-dialog-title>Are you sure you want to submit the following changes?</h1>
+<div mat-dialog-content>
+  <table mat-table [dataSource]="data" class="mat-elevation-z8">
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef>Setting Name</th>
+      <td mat-cell *matCellDef="let row">{{ row.name }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="replacedValue">
+      <th mat-header-cell *matHeaderCellDef>Old Value</th>
+      <td mat-cell *matCellDef="let row">{{ row.replacedValue }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="replacingValue">
+      <th mat-header-cell *matHeaderCellDef>New Value</th>
+      <td mat-cell *matCellDef="let row">{{ row.replacingValue }}</td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="columns"></tr>
+    <tr mat-row *matRowDef="let row; columns: columns" @fadein></tr>
+  </table>
+</div>
+<div mat-dialog-actions>
+  <button mat-raised-button (click)="cancel()">Cancel</button>
+  <button mat-raised-button color="primary" (click)="confirm()" cdkFocusInitial>
+    Confirm
+  </button>
+</div>

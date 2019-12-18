@@ -1,0 +1,43 @@
+<forms-course-instructions>
+  <p>
+    In this lesson, we'll see how using the methods that we've discussed, we can
+    implment a recursive form.
+  </p>
+
+  <p>
+    Checkout the `family-tree-utils.ts` file in the Section 4 library for the
+    tools we'll need here, and then add your implementations for the
+    `family-tree-form.component.ts` file as well as some minor adjustments to
+    the `family-tree-form.component.html` to complete this task!
+  </p>
+</forms-course-instructions>
+
+<forms-course-lesson-frame
+  title="EXERCISE: Family Tree Form"
+  [lessonFrame]="lessonFrame"
+>
+  <div class="completed">
+    <forms-course-lesson3-completed-family-tree-form
+      [formControl]="form"
+    ></forms-course-lesson3-completed-family-tree-form>
+    <button mat-button (click)="setToHomerSimpsonFamily()">
+      Set To Homer Simpson's Family
+    </button>
+    <button mat-button (click)="setToZackFamilyTree()">
+      Set to Zack's Family
+    </button>
+    <pre>{{ form.value | json }}</pre>
+  </div>
+  <div class="working">
+    <forms-course-family-tree-form
+      [formControl]="form"
+    ></forms-course-family-tree-form>
+    <button mat-button (click)="setToHomerSimpsonFamily()">
+      Set To Homer Simpson's Family
+    </button>
+    <button mat-button (click)="setToZackFamilyTree()">
+      Set to Zack's Family
+    </button>
+    <pre>{{ form.value | json }}</pre>
+  </div>
+</forms-course-lesson-frame>

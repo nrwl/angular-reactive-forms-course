@@ -1,0 +1,54 @@
+<div>
+  <forms-course-instructions>
+    <p>
+      First let's attach our control to the input below. Let's give this input
+      element a "type" of "number" and use the FormControl constructor to give
+      it an initial value of 20. We'll also use vanilla html to apply a minimum
+      value of 5 and a maximum of 25.
+    </p>
+  </forms-course-instructions>
+
+  What is your favorite multiple of 5 that is greater than 0 and less than 30?
+  <input type="number" [formControl]="control" min="5" max="25" step="5" />
+</div>
+
+<hr />
+
+<div>
+  <forms-course-instructions>
+    <p>
+      The html we added will limit users when using the up and down arrow keys,
+      but a user will still be able to type in numbers that greater than our
+      max, or lower than our min, or are not multiples of 5.
+    </p>
+    <p>
+      Let's fix this by subscribing to the `valueChanges` of our FormControl and
+      adjusting the value held by the control when it does not confirm to the
+      limitations that we want. To make things manageable, let's also set the
+      `updateOn` config option of our FormControl to 'blur'.
+    </p>
+    <p>
+      (NOTE: This in itself is not a great user experience, but it is helpful
+      for us learning the machanics of FormControls. We'll see a better user
+      experience for this in our section on Form Validation.)
+    </p>
+  </forms-course-instructions>
+</div>
+
+<hr />
+
+<div>
+  <forms-course-instructions>
+    <p>
+      Let's implement a current value and a history in the spaces below (like we
+      did in the previous example) to see how the value and valueChanges behave
+      while our `onUpdate` for the control is set to "blur".
+    </p>
+  </forms-course-instructions>
+  <pre>Your favorite multiple of 5 is: {{ control.value }}.</pre>
+  <h5>History</h5>
+  <ul>
+    <li *ngFor="let value of controlValueHistory">{{ value }}</li>
+  </ul>
+  <button (click)="controlValueHistory = []">Reset History</button>
+</div>

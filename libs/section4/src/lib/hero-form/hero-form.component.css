@@ -1,0 +1,45 @@
+mat-card.stat-card {
+  margin: 10px;
+}
+
+.hero-card {
+  margin: 10px;
+}
+
+mat-card.stat-card mat-form-field {
+  max-width: 100px;
+  margin-left: 10px;
+  margin-bottom: 40px;
+}
+
+.stat-card mat-card-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.stat-card.total-stats-error mat-card-content {
+  grid-template-rows: repeat(3, 0.2fr);
+}
+
+.hero-card mat-card-content {
+  display: grid;
+  place-content: center;
+}
+
+.total-stat-error {
+  grid-area: 3 / 1 / 4 / 3;
+  font-size: 12px;
+  display: grid;
+  place-content: center;
+}
+
+.total-stat-error div {
+  text-align: center;
+}
+
+.stat-card.total-stats-error {
+  border-color: red;
+  border-width: 3px;
+  border-style: solid;
+}

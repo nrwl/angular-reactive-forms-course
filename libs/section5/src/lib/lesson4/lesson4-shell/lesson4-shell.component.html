@@ -1,0 +1,29 @@
+<forms-course-instructions>
+  <p>
+    In this exercise, we'll implement the canDeactivate method of the component.
+    Note that in the router info located in the module file for section 4, the
+    `canDeactivate` property is already set to the ConfirmDiscardChangesGuard.
+    This guard in turn is simply returning hte canDeactive method of the
+    component, so this is already wired up to work assuming that the canDeactive
+    method is properly implemented in the component.
+  </p>
+
+  <p>
+    Provide your implemention by returning an Observable of true if no changes
+    exist, or using the injected `MatDialog` to open a dialog with the
+    `CompletedDiscardChangesDialogComponent`, and then emit a boolean value to
+    correspond to the user's interaction with that dialog.
+  </p>
+</forms-course-instructions>
+
+<forms-course-lesson-frame
+  title="Route Gaurding with Modal"
+  [lessonFrame]="lessonFrame"
+>
+  <div class="completed">
+    <forms-course-completed-wizard></forms-course-completed-wizard>
+  </div>
+  <div class="working">
+    <forms-course-wizard></forms-course-wizard>
+  </div>
+</forms-course-lesson-frame>

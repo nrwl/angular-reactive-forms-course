@@ -1,0 +1,26 @@
+<form [formGroup]="form" (submit)="addName()">
+  <div>
+    <mat-form-field appearance="outline">
+      <mat-label>Hero Name</mat-label>
+      <input matInput formControlName="name" />
+      <mat-error *ngIf="form.get('name')['errors']?.required">
+        Name is Required
+      </mat-error>
+      <mat-error *ngIf="form.get('name')['errors']?.maxLength">
+        Max Name Length is 16.
+      </mat-error>
+      <mat-error *ngIf="form.get('name')['errors']?.nameAlreadyExists">
+        Name Already Exists
+      </mat-error>
+    </mat-form-field>
+  </div>
+
+  <button
+    type="submit"
+    mat-raised-button
+    color="primary"
+    [disabled]="!form.valid"
+  >
+    Add Hero!
+  </button>
+</form>

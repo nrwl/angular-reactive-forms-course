@@ -1,0 +1,42 @@
+<forms-course-instructions>
+  <p>
+    If FormGroups are analagous to Javascript objects, FormArrays are analagous
+    to Javascript arrays.
+  </p>
+  <p>
+    In our first exercise, let's make a simple dynamic FormArray!
+  </p>
+</forms-course-instructions>
+
+<forms-course-lesson-frame
+  [lessonFrame]="simpleDynamicArrayFiles"
+  title="EXERCISE: Simple Dyanamic Form Array"
+>
+  <forms-course-lesson3-completed-simple-dynamic-array
+    class="completed"
+  ></forms-course-lesson3-completed-simple-dynamic-array>
+  <forms-course-simple-dynamic-array
+    class="working"
+  ></forms-course-simple-dynamic-array>
+</forms-course-lesson-frame>
+
+<forms-course-instructions>
+  <p>
+    As with the `FormGroup`, the `FormArray` hosts an array of
+    `AbstractControl`s. This means that we can fill it with `FormControl`s,
+    `FormGroup`s, other `FormArray`s, as well as any combination of these three.
+  </p>
+  <p>
+    Let's see this play out in the next example.
+  </p>
+</forms-course-instructions>
+
+<forms-course-lesson-frame
+  [lessonFrame]="partyFormFiles"
+  title="EXERCISE: Party Form"
+>
+  <forms-course-lesson3-completed-party-form
+    class="completed"
+  ></forms-course-lesson3-completed-party-form>
+  <forms-course-party-form class="working"></forms-course-party-form>
+</forms-course-lesson-frame>

@@ -1,0 +1,32 @@
+mat-card {
+  margin: 10px;
+}
+
+mat-card-content div {
+  display: grid;
+  place-content: center;
+}
+
+legend {
+  background-color: #000;
+  color: #fff;
+  padding: 3px 6px;
+  text-align: center;
+}
+
+fieldset {
+  border-width: 3px;
+  border-style: solid;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 10px;
+}
+
+label {
+  width: 200px;
+}
+
+.hero-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}

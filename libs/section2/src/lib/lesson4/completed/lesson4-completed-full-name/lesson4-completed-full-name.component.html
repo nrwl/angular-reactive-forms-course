@@ -1,0 +1,108 @@
+<form [formGroup]="form" (submit)="submit()">
+  <div class="form-group">
+    <label>First</label>
+    <input
+      type="text"
+      formControlName="first"
+      class="form-control"
+      [class.is-invalid]="form.get('first').invalid"
+      [class.is-valid]="form.get('first').valid"
+    />
+    <div *ngIf="form.get('first').invalid" class="invalid-feedback">
+      <div *ngIf="form.get('first')['errors'].required">
+        A valid first name is required.
+      </div>
+      <div *ngIf="form.get('first')['errors'].noNumbers">
+        First Name cannot include any numeric characters.
+      </div>
+      <div *ngIf="form.get('first')['errors'].maxlength as maxlength">
+        First Name must be less than {{ maxlength.requiredLength }} characters.
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label>Middle</label>
+    <input
+      type="text"
+      formControlName="middle"
+      class="form-control"
+      [class.is-invalid]="form.get('middle').invalid"
+      [class.is-valid]="form.get('middle').valid"
+    />
+    <div *ngIf="form.get('middle').invalid" class="invalid-feedback">
+      <div *ngIf="form.get('middle')['errors'].noNumbers">
+        Middle Name cannot include any numeric characters.
+      </div>
+      <div *ngIf="form.get('middle')['errors'].maxlength as maxlength">
+        Middle Name must be less than {{ maxlength.requiredLength }} characters.
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label>Last</label>
+    <input
+      type="text"
+      formControlName="last"
+      class="form-control"
+      [class.is-invalid]="form.get('last').invalid"
+      [class.is-valid]="form.get('last').valid"
+    />
+    <div *ngIf="form.get('last').invalid" class="invalid-feedback">
+      <div *ngIf="form.get('last')['errors'].required">
+        A valid last name is required.
+      </div>
+      <div *ngIf="form.get('last')['errors'].noNumbers">
+        Last Name cannot include any numeric characters.
+      </div>
+      <div *ngIf="form.get('last')['errors'].maxlength as maxlength">
+        Last Name must be less than {{ maxlength.requiredLength }} characters.
+      </div>
+    </div>
+  </div>
+  <div *ngIf="form.status === 'PENDING'" class="alert alert-warning">
+    Verifying your name...
+  </div>
+  <div *ngIf="form.status === 'VALID'" class="alert alert-success">
+    Everything checks out!
+  </div>
+  <div *ngIf="form.errors as errors" class="alert alert-danger" role="alert">
+    <div *ngIf="errors.alreadyExists">
+      The name you entered already exists!
+    </div>
+  </div>
+  <button class="btn btn-primary" type="submit" [disabled]="!form.valid">
+    Submit
+  </button>
+</form>
+
+<div>
+  Here's the errors object for the `FormGroup` above:
+  <pre>{{ form.errors | json }}</pre>
+</div>
+<div>
+  Here's the error object for each control of the above group:
+  <div>
+    first:
+    <pre>{{ form.get('first').errors | json }}</pre>
+  </div>
+  <div>
+    middle:
+    <pre>{{ form.get('middle').errors | json }}</pre>
+  </div>
+  <div>
+    last:
+    <pre>{{ form.get('last').errors | json }}</pre>
+  </div>
+</div>
+<div>
+  Group status:
+  <pre>{{ form.status }}</pre>
+</div>
+<div>
+  Group is valid:
+  <pre>{{ form.valid }}</pre>
+</div>
+<div>
+  Group is invalid:
+  <pre>{{ form.invalid }}</pre>
+</div>

@@ -1,0 +1,61 @@
+<forms-course-instructions>
+  <p>
+    For this lesson, we'll use the same date-time-picker component that we build
+    in the previous Section to create a date-range-picker form. (In case you
+    skipped the date-picker lesson, a date-time-picker is provided for you in at
+    `libs/section4/src/lib/date-time-picker`).
+  </p>
+  <p>
+    The date-range form will give us a start and end time Date, and to test it,
+    we'll compare it to another date-time-picker whether the value of the
+    dete-time-picker falls in the range of the date-range-picker-form.
+  </p>
+</forms-course-instructions>
+
+<forms-course-lesson-frame
+  title="EXERCISE: Creating a Date Range Picker Control"
+  [lessonFrame]="lessonFrame"
+>
+  <div class="working">
+    <div>
+      <h3>Date Range Form:</h3>
+      <forms-course-date-range-picker-form
+        [formControl]="rangeControl"
+      ></forms-course-date-range-picker-form>
+    </div>
+    <hr />
+    <div>
+      <h3>Datetime Form:</h3>
+      <forms-course-date-time-picker
+        [formControl]="dateTimeControl"
+      ></forms-course-date-time-picker>
+    </div>
+    <hr />
+    <pre>
+Does the selected fall within the given range? {{
+        dateIsWithinRange$ | async
+      }}</pre
+    >
+  </div>
+  <div class="completed">
+    <div>
+      <h3>Duration Form:</h3>
+      <forms-course-lesson1-completed-date-time-range-picker
+        [formControl]="rangeControl"
+      ></forms-course-lesson1-completed-date-time-range-picker>
+    </div>
+    <hr />
+    <div>
+      <h3>Datetime Form:</h3>
+      <forms-course-date-time-picker
+        [formControl]="dateTimeControl"
+      ></forms-course-date-time-picker>
+    </div>
+    <hr />
+    <pre>
+Does the selected fall within the given range? {{
+        dateIsWithinRange$ | async
+      }}</pre
+    >
+  </div>
+</forms-course-lesson-frame>

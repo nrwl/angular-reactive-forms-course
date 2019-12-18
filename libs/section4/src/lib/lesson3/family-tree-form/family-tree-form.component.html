@@ -1,0 +1,22 @@
+<form>
+  <fieldset>
+    <label>Name</label>
+    <input type="text" />
+  </fieldset>
+  <fieldset>
+    <label>Age</label>
+    <input type="number" />
+  </fieldset>
+  <fieldset>
+    <label>Children</label>
+    <button (click)="addChild()" class="add-child">
+      Add Child to [[ node's name or 'Unnamed Parent' ]]
+    </button>
+    <div class="child">
+      <!-- <forms-course-lesson3-completed-family-tree-form></forms-course-lesson3-completed-family-tree-form> -->
+      <button class="remove-child">
+        Remove [[ child node's name or 'Unnamed Offspring' ]]
+      </button>
+    </div>
+  </fieldset>
+</form>

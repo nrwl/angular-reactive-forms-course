@@ -1,0 +1,27 @@
+<forms-course-instructions>
+  <p>
+    In this exercise, we'll implement the ability to save the user's entries.
+    The requirements dictate that before this happens, the user should be shown
+    a dialog that displays a list of all the configurations and their old and
+    new values for the user to confirm before the save is actually committed.
+  </p>
+
+  <p>
+    Use the injected `MatDialog` to open a dialog with the
+    `CompletedConfimationDialogComponent` with the proper data, and then
+    dispatch a submitSaveRequest action to the store if the user does confirm
+    the changes.
+  </p>
+</forms-course-instructions>
+
+<forms-course-lesson-frame
+  title="Save Confirmation Dialog"
+  [lessonFrame]="lessonFrame"
+>
+  <div class="completed">
+    <forms-course-completed-wizard></forms-course-completed-wizard>
+  </div>
+  <div class="working">
+    <forms-course-wizard></forms-course-wizard>
+  </div>
+</forms-course-lesson-frame>

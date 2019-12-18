@@ -1,0 +1,154 @@
+<forms-course-instructions>
+  <p>
+    This first lesson consists of creating our base building blocks for our
+    wizard - creating a boolean, number, and string-based form (for each of the
+    config settings that our app is managing).
+  </p>
+
+  <p>
+    Let's start with the boolean form. We'll use the mat-checkbox provided by
+    @angular/material, and allow for a `storeValue` input that we'll use to
+    display an indicator in the case where a change exists.
+  </p>
+
+  <p>
+    The template is already provided for you, all that remains to be done is
+    implement the main methods required by the ControlValueAccessor.
+  </p>
+</forms-course-instructions>
+
+<forms-course-lesson-frame
+  title="Creating the Boolean Form"
+  [lessonFrame]="booleanLessonFrame"
+>
+  <div class="working">
+    <forms-course-boolean-config-setting-form
+      [formControl]="booleanControl"
+      name="boolean control test"
+      [storeValue]="booleanStoreValueControl.value"
+    ></forms-course-boolean-config-setting-form>
+    <hr />
+    <pre>form value: {{ booleanControl.value }}</pre>
+    <fieldset>
+      <label for="boolean">Mock Store Value</label>
+      <input
+        id="boolean"
+        type="checkbox"
+        [formControl]="booleanStoreValueControl"
+      />
+    </fieldset>
+  </div>
+  <div class="completed">
+    <forms-course-completed-boolean-config-setting-form
+      [formControl]="booleanControl"
+      name="boolean control test"
+      [storeValue]="booleanStoreValueControl.value"
+    ></forms-course-completed-boolean-config-setting-form>
+    <hr />
+    <fieldset>
+      <label for="boolean">Mock Store Value</label>
+      <input
+        id="boolean"
+        type="checkbox"
+        [formControl]="booleanStoreValueControl"
+      />
+    </fieldset>
+  </div>
+</forms-course-lesson-frame>
+
+<forms-course-instructions>
+  <p>
+    Next for the number form, we'll do a very similar task to the boolean form,
+    however rather than mat-checkbox, we'll be wrapping a mat-form-field.
+  </p>
+</forms-course-instructions>
+
+<forms-course-lesson-frame
+  title="Creating the Number Form"
+  [lessonFrame]="numberLessonFrame"
+>
+  <div class="working">
+    <forms-course-number-config-setting-form
+      [formControl]="numberControl"
+      name="number control test"
+      [storeValue]="numberStoreValueControl.value"
+    ></forms-course-number-config-setting-form>
+    <hr />
+    <pre>form value: {{ numberControl.value }}</pre>
+    <pre>form errors: {{ numberControl.errors | json }}</pre>
+    <fieldset>
+      <label for="number">Mock Store Value</label>
+      <input
+        id="number"
+        type="number"
+        [formControl]="numberStoreValueControl"
+      />
+    </fieldset>
+  </div>
+  <div class="completed">
+    <forms-course-completed-number-config-setting-form
+      [formControl]="numberControl"
+      name="number control test"
+      [storeValue]="numberStoreValueControl.value"
+    ></forms-course-completed-number-config-setting-form>
+    <hr />
+    <pre>form value: {{ numberControl.value }}</pre>
+    <pre>form errors: {{ numberControl.errors | json }}</pre>
+    <fieldset>
+      <label for="number">Mock Store Value</label>
+      <input
+        id="number"
+        type="number"
+        [formControl]="numberStoreValueControl"
+      />
+    </fieldset>
+  </div>
+</forms-course-lesson-frame>
+
+<forms-course-instructions>
+  <p>
+    Finally for the string form, we'll go through this pattern again.
+  </p>
+</forms-course-instructions>
+
+<forms-course-lesson-frame
+  title="Creating the String Form"
+  [lessonFrame]="stringLessonFrame"
+>
+  <div class="working">
+    <forms-course-string-config-setting-form
+      [formControl]="stringControl"
+      name="string control test"
+      [storeValue]="stringStoreValueControl.value"
+    ></forms-course-string-config-setting-form>
+    <hr />
+    <pre>form value: {{ stringControl.value }}</pre>
+    <pre>form errors: {{ stringControl.errors | json }}</pre>
+    <fieldset>
+      <label for="string">Mock Store Value</label>
+      <input
+        id="string"
+        type="string"
+        [formControl]="stringStoreValueControl"
+      />
+    </fieldset>
+  </div>
+  <div class="completed">
+    <forms-course-completed-string-config-setting-form
+      [formControl]="stringControl"
+      name="string control test"
+      [storeValue]="stringStoreValueControl.value"
+    ></forms-course-completed-string-config-setting-form>
+    <hr />
+    <pre>form value: {{ stringControl.value }}</pre>
+    <pre>form errors: {{ stringControl.errors | json }}</pre>
+    <fieldset>
+      <label for="string">Mock Store Value</label>
+      <input
+        id="string"
+        type="string"
+        [formControl]="stringStoreValueControl"
+      />
+    </fieldset>
+  </div>
+</forms-course-lesson-frame>

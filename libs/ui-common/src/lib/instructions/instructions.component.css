@@ -1,0 +1,9 @@
+:host {
+  background-color: #222222;
+  color: white;
+}
+
+.alert {
+  background-color: #333333;
+  color: white;
+}

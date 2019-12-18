@@ -1,0 +1,37 @@
+<forms-course-instructions>
+  <p>
+    For this exercise, let's use the hero form that we've used across the
+    previous sections and wrap it in a ControlValueAccessor component.
+  </p>
+
+  <p>
+    We'll see in future lessons, this makes it much easier to deal with the Hero
+    Object that the FormGroup contains, as well as facilitating re-use of this
+    form across our application, and for composing more complex forms as we'll
+    see in the upcoming section!
+  </p>
+
+  <p>
+    The template is already provided to you here, simply add your
+    implementations to the methods requried for the `ControlValueAccessor`
+    interface to complete this exercise!
+  </p>
+</forms-course-instructions>
+
+<forms-course-lesson-frame
+  title="EXERCISE: Creating a Reusable Hero Form"
+  [lessonFrame]="lessonFrame"
+>
+  <div class="completed">
+    <forms-course-lesson3-completed-hero-form
+      [formControl]="heroControl"
+    ></forms-course-lesson3-completed-hero-form>
+    <pre>form value: {{ heroControl.value | json }}</pre>
+  </div>
+  <div class="working">
+    <forms-course-hero-form
+      [formControl]="heroControl"
+    ></forms-course-hero-form>
+    <pre>form value: {{ heroControl.value | json }}</pre>
+  </div>
+</forms-course-lesson-frame>

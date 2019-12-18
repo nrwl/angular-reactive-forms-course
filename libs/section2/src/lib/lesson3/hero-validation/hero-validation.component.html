@@ -1,0 +1,50 @@
+<form>
+  <mat-card>
+    <fieldset>
+      <mat-card-title>
+        <legend>Hero Form</legend>
+      </mat-card-title>
+      <mat-card-content>
+        <mat-form-field appearance="outline">
+          <mat-label>Hero Name</mat-label>
+          <input matInput />
+          <mat-error>
+            Name is Required.
+          </mat-error>
+        </mat-form-field>
+        <ng-container>
+          <mat-card class="stat-card">
+            <fieldset>
+              <mat-card-title><legend>Hero Stats</legend></mat-card-title>
+              <div>
+                <mat-form-field appearance="outline">
+                  <mat-label>[[ stat name here]]</mat-label>
+                  <input matInput type="number" />
+                  <mat-error>
+                    [[ stat name here ]] is Required.
+                  </mat-error>
+                  <mat-error>
+                    [[ stat name here ]] is too low. The minimum allowed value
+                    is [[ min value ]].
+                  </mat-error>
+                  <mat-error>
+                    [[ stat name here ]] is too high. The maximum allowed value
+                    is [[ max value ]].
+                  </mat-error>
+                </mat-form-field>
+              </div>
+              <mat-error>
+                [[ hero name ]]'s total stats are too high. Maximum allowed
+                total stats is [[ total stats ]] and [[ hero name ]]'s total is
+                [[ total stats ]]
+              </mat-error>
+            </fieldset>
+          </mat-card>
+        </ng-container>
+      </mat-card-content>
+    </fieldset>
+    <button mat-raised-button color="primary" type="submit">
+      Submit
+    </button>
+  </mat-card>
+</form>

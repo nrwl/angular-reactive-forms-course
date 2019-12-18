@@ -1,0 +1,95 @@
+<forms-course-instructions>
+  <p>
+    For each of the sections below, create a `FormControl` and wire things up in
+    your html template to appropriately bind the control. Make sure to adjust
+    the "pre" element of each section to display the value of each form.
+  </p>
+</forms-course-instructions>
+
+<div>
+  <h5>Radio Buttons</h5>
+  <div>
+    <input
+      type="radio"
+      [formControl]="radioControl"
+      id="Red"
+      value="Red"
+    /><label for="Red">Red</label>
+  </div>
+  <div>
+    <input
+      type="radio"
+      [formControl]="radioControl"
+      id="White"
+      value="White"
+    /><label for="White">White</label>
+  </div>
+  <div>
+    <input
+      type="radio"
+      [formControl]="radioControl"
+      id="Blue"
+      value="Blue"
+    /><label for="Blue">Blue</label>
+  </div>
+  <pre>Radio Control value: {{ radioControl.value }}</pre>
+</div>
+
+<hr />
+
+<div>
+  <h5>Select</h5>
+  <select [formControl]="selectControl">
+    <option label="Red" value="Red"></option>
+    <option label="White" value="White"></option>
+    <option label="Blue" value="Blue"></option>
+  </select>
+
+  <pre>Select Control value: {{ selectControl.value }}</pre>
+</div>
+
+<hr />
+
+<div>
+  <h5>Range</h5>
+
+  <input
+    type="range"
+    id="range"
+    [formControl]="rangeControl"
+    min="0"
+    max="11"
+  /><label for="range">Volume</label>
+
+  <pre>Range Control value: {{ rangeControl.value }}</pre>
+</div>
+
+<hr />
+
+<div>
+  <p>Date</p>
+
+  <input type="date" [formControl]="dateControl" />
+
+  <pre>Date control value: {{ dateControl.value }}</pre>
+</div>
+
+<hr />
+
+<div>
+  <h5>Time</h5>
+
+  <input type="time" [formControl]="timeControl" />
+
+  <pre>Time Control value: {{ timeControl.value }}</pre>
+</div>
+
+<hr />
+
+<div>
+  <h5>Color</h5>
+
+  <input type="color" [formControl]="colorControl" />
+
+  <pre>Color Control value: {{ colorControl.value }}</pre>
+</div>

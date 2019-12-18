@@ -1,0 +1,78 @@
+<form [formGroup]="form" (submit)="submit()">
+  <mat-card>
+    <fieldset>
+      <mat-card-title>
+        <legend>Hero Form</legend>
+      </mat-card-title>
+      <mat-card-content>
+        <mat-form-field appearance="outline">
+          <mat-label>Hero Name</mat-label>
+          <input matInput formControlName="name" />
+          <mat-error *ngIf="form.controls['name'].errors?.required">
+            Name is Required.
+          </mat-error>
+        </mat-form-field>
+
+        <ng-container formGroupName="stats">
+          <mat-card
+            class="stat-card"
+            [class.total-stats-error]="form['errors']?.totalStats"
+          >
+            <fieldset>
+              <mat-card-title>
+                <legend>Hero Stats</legend>
+              </mat-card-title>
+
+              <div *ngFor="let statName of stats">
+                <mat-form-field appearance="outline">
+                  <mat-label>{{ statName | titlecase }}</mat-label>
+                  <input matInput type="number" [formControlName]="statName" />
+                  <mat-error
+                    *ngIf="
+                      form.controls['stats'].controls[statName].errors?.required
+                    "
+                  >
+                    {{ statName | titlecase }} is Required.
+                  </mat-error>
+                  <mat-error
+                    *ngIf="
+                      form.controls['stats'].controls[statName].errors
+                        ?.min as minError
+                    "
+                  >
+                    {{ statName | titlecase }} is too low. The minimum allowed
+                    value is {{ minError.min }}.
+                  </mat-error>
+                  <mat-error
+                    *ngIf="
+                      form.controls['stats'].controls[statName].errors
+                        ?.max as maxError
+                    "
+                  >
+                    {{ statName | titlecase }} is too high. The maximum allowed
+                    value is {{ maxError.max }}.
+                  </mat-error>
+                </mat-form-field>
+              </div>
+              <mat-error *ngIf="form['errors']?.totalStats as totalStatsError">
+                {{ form.get('name').value || 'Hero' }}'s total stats are too
+                high. Maximum allowed total stats is
+                {{ totalStatsError.totalStatMax }} and
+                {{ form.get('name').value || 'this hero' }}'s total is
+                {{ totalStatsError.heroTotalStats }}
+              </mat-error>
+            </fieldset>
+          </mat-card>
+        </ng-container>
+      </mat-card-content>
+    </fieldset>
+    <button
+      mat-raised-button
+      color="primary"
+      type="submit"
+      [disabled]="form.status !== 'VALID'"
+    >
+      Submit
+    </button>
+  </mat-card>
+</form>

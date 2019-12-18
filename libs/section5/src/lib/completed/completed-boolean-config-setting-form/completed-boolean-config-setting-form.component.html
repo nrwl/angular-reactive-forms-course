@@ -1,0 +1,9 @@
+<mat-checkbox
+  [formControl]="control"
+  (blur)="blur()"
+  matBadge="!"
+  matBadgeColor="warn"
+  [matBadgeOverlap]="false"
+  [matBadgeHidden]="formValueMatchesStoreValue$ | async"
+  >{{ name }}</mat-checkbox
+>

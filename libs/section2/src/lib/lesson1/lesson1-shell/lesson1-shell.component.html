@@ -1,0 +1,51 @@
+<forms-course-instructions>
+  <p>
+    To get started with Validators, let's start with the built-in validators
+    provided by the Angular Forms API. We can find a full list of the provided
+    built-in validators in the Angular Docs.
+  </p>
+</forms-course-instructions>
+
+<forms-course-instructions>
+  <p>
+    For this first exercise, create a new `FormControl` for the email input
+    below. Use the built-in validators to make this field be required, have a
+    minimum length of 5, and be in valid email format.
+  </p>
+</forms-course-instructions>
+
+<forms-course-lesson-frame
+  [lessonFrame]="simpleLessonFrame"
+  title="EXERCISE: Simple Built-in Validators"
+>
+  <forms-course-simple-built-in-validators
+    class="working"
+  ></forms-course-simple-built-in-validators>
+  <forms-course-lesson1-completed-simple-built-in-validators
+    class="completed"
+  ></forms-course-lesson1-completed-simple-built-in-validators>
+</forms-course-lesson-frame>
+
+<forms-course-instructions>
+  <p>
+    For this next exercise, we'll revisit the Hero Form that we created in our
+    previous exercise.
+  </p>
+
+  <p>
+    Imagine we had some business logic that stated that a name is required for
+    each hero, and the maximum value for any hero stat is 20, and the minimum is
+    0. Let's implement those constraints on the FormGroup we created and watch
+    how the errors and status of the FormGroup behaves.
+  </p>
+</forms-course-instructions>
+
+<forms-course-lesson-frame
+  [lessonFrame]="heroValidationLessonFrame"
+  title="EXERCISE: Hero Validation"
+>
+  <forms-course-hero-validation class="working"></forms-course-hero-validation>
+  <forms-course-lesson1-completed-hero-validation
+    class="completed"
+  ></forms-course-lesson1-completed-hero-validation>
+</forms-course-lesson-frame>

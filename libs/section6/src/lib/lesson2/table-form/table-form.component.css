@@ -1,0 +1,15 @@
+.filter {
+  padding-right: 20px;
+}
+
+.column-filter {
+  padding-right: 20px;
+}
+
+.pageSize {
+  padding-right: 20px;
+}
+
+::ng-deep mat-button-toggle-group {
+  top: -5px;
+}

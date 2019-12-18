@@ -1,0 +1,40 @@
+<forms-course-instructions>
+  <p>
+    For this exercise, we have a mocked out task list in our component
+    typescript code, and the html skeleton of a form that we'll use to filter
+    our tasks. We'll create a FormGroup in our component typescript code and
+    bind that form group to the template. Make sure to add a binding to the pre
+    element at the bottom so we can track the value of the FormGroup as a user
+    enters input.
+  </p>
+
+  <p>
+    Then we'll subscribe to the `valueChanges` of the FormGroup to create a
+    filtered list of tasks by combining the value of the FormGroup with the
+    mocked out tasks property of the component class.
+  </p>
+</forms-course-instructions>
+
+<form [formGroup]="form">
+  <div>
+    <label for="nameFilter">Task Name:</label>
+    <input id="nameFilter" type="text" formControlName="nameFilter" />
+  </div>
+  <div>
+    <input
+      type="checkbox"
+      id="showOnlyUnassignedTickets"
+      formControlName="showOnlyUnassignedTickets"
+    />
+    <label for="showOnlyUnassignedTickets">Show Only Unassigned Tickets</label>
+  </div>
+  <div>
+    <ul>
+      <li *ngFor="let task of filteredTasks">
+        <strong>Task Name:</strong> "{{ task.name }}" |
+        <strong>Assigned to:</strong> {{ task.assignedTo || 'Unassigned' }}
+      </li>
+    </ul>
+  </div>
+  <pre>Form Value: {{ form.value | json }}</pre>
+</form>

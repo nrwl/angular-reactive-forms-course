@@ -1,0 +1,21 @@
+fieldset {
+  border-width: 2px;
+  border-style: solid;
+}
+
+label {
+  display: block;
+}
+
+.add-child {
+  display: block;
+}
+
+.remove-child {
+  float: right;
+}
+
+.child {
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+}

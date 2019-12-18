@@ -1,0 +1,135 @@
+<forms-course-instructions>
+  <p>
+    Let's start things out with the very basic example of creating and binding a
+    FormControl to a text input, and use that to discover the basic
+    functionality that we'll be using in our reactive forms.
+  </p>
+
+  <p>
+    Be sure to consult the
+    <a
+      href="https://angular.io/api/forms/FormControl"
+      target="_blank"
+      class="alert-link"
+      >official docs for FormControls</a
+    >
+    if you're having issues.
+  </p>
+</forms-course-instructions>
+
+<forms-course-lesson-frame
+  [lessonFrame]="textInputFiles"
+  title="EXERCISE: Simple Text Input and Reactivity"
+>
+  <forms-course-lesson1-completed-text-input
+    class="completed"
+  ></forms-course-lesson1-completed-text-input>
+  <forms-course-text-input class="working"></forms-course-text-input>
+</forms-course-lesson-frame>
+
+<forms-course-instructions>
+  <p>
+    Before moving on, let's take a moment to checkout the
+    <a
+      href="https://angular.io/api/forms/DefaultValueAccessor"
+      target="_blank"
+      class="alert-link"
+    >
+      `DefaultValueAccessor`</a
+    >.
+  </p>
+
+  <p>
+    This is the implementation of the `ControlValueAccessor` interface that the
+    Angular framework is using in the text input example. For bonus work, go
+    modify some of the Angular source code so you can see how and when some of
+    these methods are being called.
+  </p>
+
+  <p>
+    Looking at the Angular.io documentation for `DefaultValueAccessor`, we can
+    see via the "Selectors" section that this is the `ControlValueAccessor` used
+    for non-checkbox input elements and textarea elements. In our next example,
+    let's try creating a number input:
+  </p>
+</forms-course-instructions>
+
+<forms-course-lesson-frame
+  [lessonFrame]="numberInputFiles"
+  title="EXERCISE: Simple Number Input"
+>
+  <forms-course-lesson1-completed-number-input
+    class="completed"
+  ></forms-course-lesson1-completed-number-input>
+  <forms-course-number-input class="working"></forms-course-number-input>
+</forms-course-lesson-frame>
+
+<forms-course-instructions>
+  <p>
+    Checkout the documentation/source code for the
+    <a
+      href="https://angular.io/api/forms/NumberValueAccessor"
+      target="_blank"
+      class="alert-link"
+      >`NumberValueAccessor`</a
+    >. Take note of what this implementation of `ControlValueAccessor` is doing
+    differently to accomodate a form value of a number rather than a string.
+  </p>
+  <p>
+    In our next exercise, let's try some other input types!
+  </p>
+</forms-course-instructions>
+
+<forms-course-lesson-frame
+  [lessonFrame]="otherControlsFiles"
+  title="EXERCISE: Other Controls"
+>
+  <forms-course-lesson1-completed-other-controls
+    class="completed"
+  ></forms-course-lesson1-completed-other-controls>
+  <forms-course-other-controls class="working"></forms-course-other-controls>
+</forms-course-lesson-frame>
+
+<forms-course-instructions>
+  <p>
+    Checkout the
+    <a
+      href="https://angular.io/api/forms/RangeValueAccessor"
+      target="_blank"
+      class="alert-link"
+      >`RangeValueAccessor`</a
+    >,
+    <a
+      href="https://angular.io/api/forms/RadioControlValueAccessor"
+      target="_blank"
+      class="alert-link"
+      >`RadioControlValueAccessor`</a
+    >, and
+    <a
+      href="https://angular.io/api/forms/SelectControlValueAccessor"
+      target="_blank"
+      class="alert-link"
+      >`SelectControlValueAccessor`</a
+    >
+    docs to see these specific implementations. As it turns out, the data, time
+    and color controls don't need any special `ControlValueAccessor` bridge, as
+    they can just use the Default implementation.
+  </p>
+
+  <p>
+    For our next exercise, let's take a quick stab at taking the select example
+    from above, but making the options for this select element dynamic!
+  </p>
+</forms-course-instructions>
+
+<forms-course-lesson-frame
+  [lessonFrame]="makingFormsDynamicFiles"
+  title="EXERCISE: Making Forms Dynamic"
+>
+  <forms-course-lesson1-completed-making-forms-dynamic
+    class="completed"
+  ></forms-course-lesson1-completed-making-forms-dynamic>
+  <forms-course-making-forms-dynamic
+    class="working"
+  ></forms-course-making-forms-dynamic>
+</forms-course-lesson-frame>

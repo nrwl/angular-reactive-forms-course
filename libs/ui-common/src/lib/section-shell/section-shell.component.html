@@ -1,0 +1,49 @@
+<ng-container *ngIf="(routeData$ | async) as routeData">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>
+        <h2>{{ routeData.sectionTitle }}</h2>
+      </mat-card-title>
+      <mat-card-subtitle>
+        <h3>{{ routeData.sectionSubtitle }}</h3>
+      </mat-card-subtitle>
+    </mat-card-header>
+
+    <mat-card-content *ngIf="showLessons" @fadein @fadeout>
+      <mat-nav-list>
+        <a
+          mat-list-item
+          *ngFor="let lesson of routeData.sectionLessons"
+          [routerLink]="[routeData.sectionPath, lesson.path]"
+          routerLinkActive="active"
+          ><mat-icon>assignment</mat-icon><span>{{ lesson.navText }}</span></a
+        >
+      </mat-nav-list>
+    </mat-card-content>
+
+    <mat-card-actions>
+      <button mat-raised-button (click)="toggleLessonLinks()">
+        {{ showLessons ? 'Hide' : 'Show' }} Lessons
+      </button>
+    </mat-card-actions>
+  </mat-card>
+
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>
+        <h4>{{ routeData.lessonTitle }}</h4>
+      </mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <router-outlet></router-outlet>
+    </mat-card-content>
+    <mat-card-actions>
+      <a *ngIf="routeData.prev" [routerLink]="routeData.prev" mat-raised-button
+        >Previous Lesson</a
+      >
+      <a *ngIf="routeData.next" [routerLink]="routeData.next" mat-raised-button
+        >Next Lesson</a
+      >
+    </mat-card-actions>
+  </mat-card>
+</ng-container>

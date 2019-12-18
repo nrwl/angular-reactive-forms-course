@@ -1,0 +1,21 @@
+<form [formGroup]="form" [class.error]="form.invalid">
+  <fieldset>
+    <legend>Start Date</legend>
+    <forms-course-date-time-picker
+      formControlName="start"
+    ></forms-course-date-time-picker>
+  </fieldset>
+
+  <fieldset>
+    <legend>End Date</legend>
+    <forms-course-date-time-picker
+      formControlName="end"
+    ></forms-course-date-time-picker>
+  </fieldset>
+
+  <div class="error-message" *ngIf="form['errors']?.startIsAfterEnd">
+    <p>
+      Uh-oh! It looks like your end date occurs before your start date!
+    </p>
+  </div>
+</form>

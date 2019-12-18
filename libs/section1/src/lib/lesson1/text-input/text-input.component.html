@@ -1,0 +1,66 @@
+<div>
+  <forms-course-instructions>
+    <p>
+      First, let's attach a reactive FormControl to the text input element:
+    </p>
+  </forms-course-instructions>
+  My name is: <input type="text" />
+</div>
+
+<hr />
+
+<div>
+  <forms-course-instructions>
+    <p>
+      Next let's display the current value of that control inside this 'pre'
+      element:
+    </p>
+  </forms-course-instructions>
+
+  <pre>The control's value is: ""</pre>
+</div>
+
+<hr />
+
+<div>
+  <forms-course-instructions>
+    <p>
+      Next we'll implement a button that when clicked will populate the input
+      with your name:
+    </p>
+  </forms-course-instructions>
+
+  <button (click)="setFormToMyName()">Set Value To My Name</button>
+</div>
+
+<hr />
+
+<div>
+  <forms-course-instructions>
+    <p>
+      Next, let's add a button that will toggle whether the form is enabled or
+      disabled:
+    </p>
+  </forms-course-instructions>
+
+  <button (click)="toggleFormEnabled()">
+    Disable/Enable Control
+  </button>
+</div>
+
+<hr />
+
+<div>
+  <forms-course-instructions>
+    <p>
+      Finally, let's build a list of the history of all values of the form, by
+      subscribing to the `valueChanges` Observable exposed by our FormControl.
+    </p>
+  </forms-course-instructions>
+
+  <ul>
+    <li>Place each history item in a list item like this.</li>
+  </ul>
+
+  <button (click)="clearHistory()">Clear History</button>
+</div>

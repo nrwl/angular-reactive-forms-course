@@ -13,6 +13,27 @@
     },
     "forms-course": {
       "tags": []
+    },
+    "section1": {
+      "tags": ["type:feature"]
+    },
+    "section2": {
+      "tags": ["type:feature"]
+    },
+    "ui-common": {
+      "tags": ["type:ui"]
+    },
+    "section5": {
+      "tags": []
+    },
+    "section3": {
+      "tags": []
+    },
+    "section4": {
+      "tags": []
+    },
+    "section6": {
+      "tags": []
     }
   }
 }

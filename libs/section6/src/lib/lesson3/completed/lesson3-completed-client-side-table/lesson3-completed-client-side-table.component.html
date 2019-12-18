@@ -1,0 +1,16 @@
+<mat-card>
+  <mat-card-title>Hero Table</mat-card-title>
+
+  <mat-card-content>
+    <forms-course-lesson2-completed-table-form
+      [totalItems]="totalItems$ | async"
+      [formControl]="tableForm"
+    ></forms-course-lesson2-completed-table-form>
+
+    <forms-course-lesson1-completed-hero-grid
+      [formControl]="columnFilterForm"
+      [heroes]="heroesOnPage$ | async"
+      [columnFiltersTurnedOn]="tableForm.value.columnFilters"
+    ></forms-course-lesson1-completed-hero-grid>
+  </mat-card-content>
+</mat-card>

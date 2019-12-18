@@ -118,6 +118,223 @@
           }
         }
       }
+    },
+    "section1": {
+      "projectType": "library",
+      "root": "libs/section1",
+      "sourceRoot": "libs/section1/src",
+      "prefix": "forms-course",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/section1/tsconfig.lib.json",
+              "libs/section1/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/section1/jest.config.js",
+            "tsConfig": "libs/section1/tsconfig.spec.json",
+            "setupFile": "libs/section1/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "styleext": "scss"
+        }
+      }
+    },
+    "section2": {
+      "projectType": "library",
+      "root": "libs/section2",
+      "sourceRoot": "libs/section2/src",
+      "prefix": "forms-course",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/section2/tsconfig.lib.json",
+              "libs/section2/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/section2/jest.config.js",
+            "tsConfig": "libs/section2/tsconfig.spec.json",
+            "setupFile": "libs/section2/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "styleext": "scss"
+        }
+      }
+    },
+    "ui-common": {
+      "projectType": "library",
+      "root": "libs/ui-common",
+      "sourceRoot": "libs/ui-common/src",
+      "prefix": "forms-course",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/ui-common/tsconfig.lib.json",
+              "libs/ui-common/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/ui-common/jest.config.js",
+            "tsConfig": "libs/ui-common/tsconfig.spec.json",
+            "setupFile": "libs/ui-common/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "styleext": "scss"
+        }
+      }
+    },
+    "section5": {
+      "projectType": "library",
+      "root": "libs/section5",
+      "sourceRoot": "libs/section5/src",
+      "prefix": "forms-course",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/section5/tsconfig.lib.json",
+              "libs/section5/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/section5/jest.config.js",
+            "tsConfig": "libs/section5/tsconfig.spec.json",
+            "setupFile": "libs/section5/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "styleext": "scss"
+        }
+      }
+    },
+    "section3": {
+      "projectType": "library",
+      "root": "libs/section3",
+      "sourceRoot": "libs/section3/src",
+      "prefix": "forms-course",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/section3/tsconfig.lib.json",
+              "libs/section3/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/section3/jest.config.js",
+            "tsConfig": "libs/section3/tsconfig.spec.json",
+            "setupFile": "libs/section3/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "styleext": "scss"
+        }
+      }
+    },
+    "section4": {
+      "projectType": "library",
+      "root": "libs/section4",
+      "sourceRoot": "libs/section4/src",
+      "prefix": "forms-course",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/section4/tsconfig.lib.json",
+              "libs/section4/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/section4/jest.config.js",
+            "tsConfig": "libs/section4/tsconfig.spec.json",
+            "setupFile": "libs/section4/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "styleext": "scss"
+        }
+      }
+    },
+    "section6": {
+      "projectType": "library",
+      "root": "libs/section6",
+      "sourceRoot": "libs/section6/src",
+      "prefix": "forms-course",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/section6/tsconfig.lib.json",
+              "libs/section6/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/section6/jest.config.js",
+            "tsConfig": "libs/section6/tsconfig.spec.json",
+            "setupFile": "libs/section6/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "styleext": "scss"
+        }
+      }
     }
   },
   "cli": {

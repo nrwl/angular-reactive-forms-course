@@ -1,0 +1,39 @@
+<forms-course-instructions>
+  <p>
+    In this exercise, we'll use the parent form created in our previous lesson
+    to implement our wizard proper. Looking at the template, the main
+    implementation is already provided using the mat-card component of the
+    @angular/material package. We'll need to uncomment the
+    forms-course-wizard-form within the mat-content component.
+  </p>
+
+  <p>
+    Following that, create your form within the tap operator piped onto the
+    `configSettingsFromStore$` Observable (see the comment in the file), using
+    the createcreateConfigSettingFormControl() factory function provided in the
+    `wizard-form.utils.ts` file.
+  </p>
+
+  <p>
+    Once this is done, we can uncomment the `_formIsValid$` and `savePending$`
+    implementations, and create our own implementation of the `_formHasChanges$`
+    Observable.
+  </p>
+
+  <p>
+    Finally, implement the `discardChanges()` method, setting the value of the
+    form to reflect the value of the store.
+  </p>
+</forms-course-instructions>
+
+<forms-course-lesson-frame
+  title="Detecting Changes Against an NgRx Store"
+  [lessonFrame]="lessonFrame"
+>
+  <div class="completed">
+    <forms-course-completed-wizard></forms-course-completed-wizard>
+  </div>
+  <div class="working">
+    <forms-course-wizard></forms-course-wizard>
+  </div>
+</forms-course-lesson-frame>

@@ -1,0 +1,30 @@
+[mat-sort-header] {
+  padding: 20px;
+}
+
+::ng-deep .mat-form-field-wrapper {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+table {
+  width: 100%;
+}
+
+.loading-shade {
+  position: absolute;
+  top: 0;
+  bottom: 16px;
+  left: 16px;
+  right: 16px;
+  margin-top: 196px;
+  background: rgba(0, 0, 0, 0.15);
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loading-shade.filters-on {
+  margin-top: 261px;
+}
