@@ -15,14 +15,8 @@
       "prefix": "forms-course",
       "targets": {
         "build": {
-          "builder": "@angular-builders/custom-webpack:browser",
+          "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "customWebpackConfig": {
-              "path": "./extra-webpack.config.js",
-              "mergeRules": {
-                "externals": "replace"
-              }
-            },
             "outputPath": "dist/apps/forms-course",
             "index": "apps/forms-course/src/index.html",
             "main": "apps/forms-course/src/main.ts",
