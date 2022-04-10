@@ -11,7 +11,7 @@ import {
   ViewChildren
 } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
-import { MatButton } from '@angular/material';
+import { MatButton } from '@angular/material/button';
 
 @Component({
   selector: 'forms-course-lesson1-completed-number-picker',

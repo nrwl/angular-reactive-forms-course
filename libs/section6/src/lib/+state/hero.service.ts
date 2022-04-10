@@ -10,7 +10,7 @@ import {
   heroesOnPage
 } from './hero.utils';
 import { initialHeroes } from './hero.reducer';
-import { Sort } from '@angular/material';
+import { Sort } from '@angular/material/sort';
 import { delay, tap } from 'rxjs/operators';
 
 @Injectable()

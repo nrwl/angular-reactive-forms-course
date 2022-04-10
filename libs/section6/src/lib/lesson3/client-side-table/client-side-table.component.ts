@@ -9,7 +9,7 @@ import {
   heroColumnFilter,
   heroesOnPage
 } from '../../+state/hero.utils';
-import { Sort } from '@angular/material';
+import { Sort } from '@angular/material/sort';
 import { Observable } from 'rxjs';
 import { Store, select } from '@ngrx/store';
 import {

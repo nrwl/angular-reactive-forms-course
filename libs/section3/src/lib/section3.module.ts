@@ -6,13 +6,11 @@ import { Lesson1ShellComponent } from './lesson1/lesson1-shell/lesson1-shell.com
 import { UiCommonModule } from '@forms-course/ui-common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Lesson1CompletedNumberPickerComponent } from './lesson1/completed/lesson1-completed-number-picker/lesson1-completed-number-picker.component';
-import {
-  MatButtonModule,
-  MatIconModule,
-  MatCardModule,
-  MatFormFieldModule,
-  MatInputModule
-} from '@angular/material';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon'
+import { MatCardModule } from '@angular/material/card'
+import { MatFormFieldModule } from '@angular/material/form-field'
+import { MatInputModule } from '@angular/material/input';
 import { Lesson3ShellComponent } from './lesson3/lesson3-shell/lesson3-shell.component';
 import { Lesson2ShellComponent } from './lesson2/lesson2-shell/lesson2-shell.component';
 import { Lesson3CompletedHeroFormComponent } from './lesson3/completed/lesson3-completed-hero-form/lesson3-completed-hero-form.component';

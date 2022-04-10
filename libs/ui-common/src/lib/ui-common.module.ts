@@ -4,14 +4,12 @@ import { RouterModule } from '@angular/router';
 import { SectionShellComponent } from './section-shell/section-shell.component';
 import { LessonFrameComponent } from './lesson-frame/lesson-frame.component';
 import { CodePreviewComponent } from './code-preview/code-preview.component';
-import {
-  MatTabsModule,
-  MatCardModule,
-  MatButtonModule,
-  MatListModule,
-  MatIconModule
-} from '@angular/material';
 import { InstructionsComponent } from './instructions/instructions.component';
+import { MatTabsModule } from '@angular/material/tabs';
+import { MatCardModule } from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
+import { MatListModule } from '@angular/material/list';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   imports: [

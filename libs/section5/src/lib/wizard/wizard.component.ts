@@ -8,7 +8,7 @@ import {
 } from '../+state';
 import { Observable, Subject, combineLatest, of } from 'rxjs';
 import { Store, select } from '@ngrx/store';
-import { MatDialog } from '@angular/material';
+import { MatDialog } from '@angular/material/dialog';
 import {
   takeUntil,
   tap,

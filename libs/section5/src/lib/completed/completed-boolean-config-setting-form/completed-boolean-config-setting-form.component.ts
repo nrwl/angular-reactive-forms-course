@@ -70,4 +70,6 @@ export class CompletedBooleanConfigSettingFormComponent
   ngOnDestroy() {
     this._destroying.next();
   }
+
+  blur() {}
 }

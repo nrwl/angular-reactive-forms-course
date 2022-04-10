@@ -11,13 +11,11 @@ import { Lesson3ShellComponent } from './lesson3/lesson3-shell/lesson3-shell.com
 import { Lesson4ShellComponent } from './lesson4/lesson4-shell/lesson4-shell.component';
 import { Lesson5ShellComponent } from './lesson5/lesson5-shell/lesson5-shell.component';
 import { Lesson3CompletedHeroValidationComponent } from './lesson3/completed/lesson3-completed-hero-validation/lesson3-completed-hero-validation.component';
-import {
-  MatCardModule,
-  MatFormFieldModule,
-  MatInputModule,
-  MatButtonModule,
-  MatSnackBarModule
-} from '@angular/material';
+import { MatCardModule } from '@angular/material/card';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { Lesson2CompletedBootstrapExampleComponent } from './lesson2/completed/lesson2-completed-bootstrap-example/lesson2-completed-bootstrap-example.component';
 import { Lesson2CompletedMaterialExampleComponent } from './lesson2/completed/lesson2-completed-material-example/lesson2-completed-material-example.component';
 import { StoreModule } from '@ngrx/store';

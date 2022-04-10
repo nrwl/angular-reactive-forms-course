@@ -7,33 +7,21 @@
     "tslint.json": "*",
     "nx.json": "*"
   },
-  "projects": {
-    "forms-course-e2e": {
-      "tags": []
-    },
-    "forms-course": {
-      "tags": []
-    },
-    "section1": {
-      "tags": ["type:feature"]
-    },
-    "section2": {
-      "tags": ["type:feature"]
-    },
-    "ui-common": {
-      "tags": ["type:ui"]
-    },
-    "section5": {
-      "tags": []
-    },
-    "section3": {
-      "tags": []
-    },
-    "section4": {
-      "tags": []
-    },
-    "section6": {
-      "tags": []
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "@nrwl/nx-cloud",
+      "options": {
+        "cacheableOperations": [
+          "build",
+          "lint",
+          "test",
+          "e2e",
+          "buildForProd",
+          "deploy",
+          "ci"
+        ],
+        "accessToken": "Y2YxZGUxMGMtYmExOS00OWYyLWIzZjgtYTM1ZGYxMDgxNjcwfHJlYWQtd3JpdGU="
+      }
     }
   }
 }

@@ -4,12 +4,10 @@ import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { UiCommonModule } from '@forms-course/ui-common';
 import { AppComponent } from './app.component';
-import {
-  MatSidenavModule,
-  MatListModule,
-  MatIconModule,
-  MatToolbarModule
-} from '@angular/material';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatListModule } from '@angular/material/list';
+import { MatIconModule } from '@angular/material/icon';
+import { MatToolbarModule } from '@angular/material/toolbar';
 import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';

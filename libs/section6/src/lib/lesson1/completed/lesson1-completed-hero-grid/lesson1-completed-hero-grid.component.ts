@@ -8,7 +8,7 @@ import {
   OnChanges,
   SimpleChanges
 } from '@angular/core';
-import { Sort, MatSort } from '@angular/material';
+import { Sort, MatSort } from '@angular/material/sort';
 import { Observable, Subject, BehaviorSubject } from 'rxjs';
 import {
   ControlValueAccessor,

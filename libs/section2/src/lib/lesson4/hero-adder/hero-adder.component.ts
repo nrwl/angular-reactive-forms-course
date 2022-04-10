@@ -3,7 +3,7 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { heroSelector } from '../../+state/hero.selector';
 import { select, Store } from '@ngrx/store';
 import { take, map } from 'rxjs/operators';
-import { MatSnackBar } from '@angular/material';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { createHero } from '../../+state/hero.actions';
 
 @Component({

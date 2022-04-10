@@ -26,7 +26,7 @@
 
         <div class="hero-container">
           <forms-course-hero-form
-            *ngFor="let hero of form.controls['heroes'].controls"
+            *ngFor="let hero of $any(form.controls['heroes']).controls"
             [formControl]="hero"
           ></forms-course-hero-form>
         </div>

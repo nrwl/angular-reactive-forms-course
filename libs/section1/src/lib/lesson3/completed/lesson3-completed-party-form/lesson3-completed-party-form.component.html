@@ -36,7 +36,7 @@
     <div class="hero-container">
       <form
         *ngFor="
-          let heroGroup of form.controls['heroes'].controls;
+          let heroGroup of $any(form.controls['heroes']).controls;
           let i = index
         "
         [formGroup]="heroGroup"

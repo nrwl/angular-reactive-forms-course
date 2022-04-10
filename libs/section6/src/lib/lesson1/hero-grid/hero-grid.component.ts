@@ -14,7 +14,7 @@ import {
   NG_VALUE_ACCESSOR,
   FormControl
 } from '@angular/forms';
-import { MatSort, Sort } from '@angular/material';
+import { MatSort, Sort } from '@angular/material/sort';
 import { Observable, ReplaySubject, Subject } from 'rxjs';
 import { Hero, HeroColumnFilters } from '../../+state/hero.utils';
 

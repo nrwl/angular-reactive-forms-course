@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormControl } from '@angular/forms';
-import { Sort } from '@angular/material';
+import { Sort } from '@angular/material/sort';
 import { Observable } from 'rxjs';
 import {
   map,

@@ -4,7 +4,7 @@ import { select, Store } from '@ngrx/store';
 import { map, take } from 'rxjs/operators';
 import { heroSelector } from '../../../+state/hero.selector';
 import { createHero } from '../../../+state/hero.actions';
-import { MatSnackBar } from '@angular/material';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'forms-course-lesson4-completed-hero-adder',

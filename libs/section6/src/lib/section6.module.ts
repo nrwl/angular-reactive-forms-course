@@ -3,17 +3,6 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { Lesson1ShellComponent } from './lesson1/lesson1-shell/lesson1-shell.component';
 import { Lesson1CompletedPaginationFormComponent } from './lesson1/completed/lesson1-completed-pagination-form/lesson1-completed-pagination-form.component';
-import {
-  MatButtonToggleModule,
-  MatFormFieldModule,
-  MatInputModule,
-  MatSelectModule,
-  MatTableModule,
-  MatSortModule,
-  MatCheckboxModule,
-  MatCardModule,
-  MatProgressSpinnerModule
-} from '@angular/material';
 import { UiCommonModule } from '@forms-course/ui-common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Lesson2CompletedTableFormComponent } from './lesson2/completed/lesson2-completed-table-form/lesson2-completed-table-form.component';
@@ -31,6 +20,15 @@ import { HeroGridComponent } from './lesson1/hero-grid/hero-grid.component';
 import { TableFormComponent } from './lesson2/table-form/table-form.component';
 import { ClientSideTableComponent } from './lesson3/client-side-table/client-side-table.component';
 import { ServerSideTableComponent } from './lesson4/server-side-table/server-side-table.component';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
+import { MatTableModule } from '@angular/material/table';
+import { MatSortModule } from '@angular/material/sort';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatCardModule } from '@angular/material/card';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 @NgModule({
   imports: [

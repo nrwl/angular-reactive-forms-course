@@ -14,7 +14,7 @@
     </button>
     <div
       *ngFor="
-        let childForm of form.controls['children'].controls;
+        let childForm of $any(form.controls['children']).controls;
         let i = index
       "
       class="child"

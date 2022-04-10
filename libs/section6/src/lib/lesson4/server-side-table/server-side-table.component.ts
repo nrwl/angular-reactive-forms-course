@@ -6,7 +6,7 @@ import {
   defaultTableFormValue,
   Hero
 } from '../../+state/hero.utils';
-import { Sort } from '@angular/material';
+import { Sort } from '@angular/material/sort';
 import { Observable } from 'rxjs';
 import { HeroGridComponent } from '../../lesson1/hero-grid/hero-grid.component';
 import { FormControl } from '@angular/forms';

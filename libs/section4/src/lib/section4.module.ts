@@ -10,13 +10,11 @@ import { DateTimePickerComponent } from './date-time-picker/date-time-picker.com
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { UiCommonModule } from '@forms-course/ui-common';
 import { HeroFormComponent } from './hero-form/hero-form.component';
-import {
-  MatCardModule,
-  MatInputModule,
-  MatFormFieldModule,
-  MatSelectModule,
-  MatButtonModule
-} from '@angular/material';
+import { MatCardModule } from '@angular/material/card';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatButtonModule } from '@angular/material/button';
+import { MatSelectModule } from '@angular/material/select';
 import { Lesson2CompletedHeroPartyFormComponent } from './lesson2/completed/lesson2-completed-hero-party-form/lesson2-completed-hero-party-form.component';
 import { Lesson3CompletedFamilyTreeFormComponent } from './lesson3/completed/lesson3-completed-family-tree-form/lesson3-completed-family-tree-form.component';
 import { DateRangePickerFormComponent } from './lesson1/date-range-picker-form/date-range-picker-form.component';

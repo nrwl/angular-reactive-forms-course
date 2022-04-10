@@ -10,18 +10,13 @@ import {
   initialState
 } from './+state';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import {
-  MatCheckboxModule,
-  MatInputModule,
-  MatFormFieldModule,
-  MatTabsModule,
-  MatCardModule,
-  MatButtonModule,
-  MatBadgeModule,
-  MatTableModule,
-  MatProgressSpinnerModule,
-  MatDialogModule
-} from '@angular/material';
+import {MatCheckboxModule } from '@angular/material/checkbox'
+import {MatFormFieldModule } from '@angular/material/form-field'
+import {MatInputModule } from '@angular/material/input'
+import { MatBadgeModule } from '@angular/material/badge';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatTableModule } from '@angular/material/table';
+import { MatDialogModule } from '@angular/material/dialog';
 import { CompletedBooleanConfigSettingFormComponent } from './completed/completed-boolean-config-setting-form/completed-boolean-config-setting-form.component';
 import { CompletedNumberConfigSettingFormComponent } from './completed/completed-number-config-setting-form/completed-number-config-setting-form.component';
 import { CompletedStringConfigSettingFormComponent } from './completed/completed-string-config-setting-form/completed-string-config-setting-form.component';
@@ -41,6 +36,9 @@ import { NumberConfigSettingFormComponent } from './lesson1/number-config-settin
 import { StringConfigSettingFormComponent } from './lesson1/string-config-setting-form/string-config-setting-form.component';
 import { WizardFormComponent } from './lesson2/wizard-form/wizard-form.component';
 import { ConfirmDiscardChangesGuard } from './lesson4/confirm-discard-changes.guard.ts.guard';
+import { MatCardModule } from '@angular/material/card';
+import { MatTabsModule } from '@angular/material/tabs';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   imports: [

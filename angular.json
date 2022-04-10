@@ -13,10 +13,16 @@
       "root": "apps/forms-course",
       "sourceRoot": "apps/forms-course/src",
       "prefix": "forms-course",
-      "architect": {
+      "targets": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "@angular-builders/custom-webpack:browser",
           "options": {
+            "customWebpackConfig": {
+              "path": "./extra-webpack.config.js",
+              "mergeRules": {
+                "externals": "replace"
+              }
+            },
             "outputPath": "dist/apps/forms-course",
             "index": "apps/forms-course/src/index.html",
             "main": "apps/forms-course/src/main.ts",
@@ -97,7 +103,7 @@
       "root": "apps/forms-course-e2e",
       "sourceRoot": "apps/forms-course-e2e/src",
       "projectType": "application",
-      "architect": {
+      "targets": {
         "e2e": {
           "builder": "@nrwl/cypress:cypress",
           "options": {
@@ -124,7 +130,7 @@
       "root": "libs/section1",
       "sourceRoot": "libs/section1/src",
       "prefix": "forms-course",
-      "architect": {
+      "targets": {
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
@@ -155,7 +161,7 @@
       "root": "libs/section2",
       "sourceRoot": "libs/section2/src",
       "prefix": "forms-course",
-      "architect": {
+      "targets": {
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
@@ -186,7 +192,7 @@
       "root": "libs/ui-common",
       "sourceRoot": "libs/ui-common/src",
       "prefix": "forms-course",
-      "architect": {
+      "targets": {
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
@@ -217,7 +223,7 @@
       "root": "libs/section5",
       "sourceRoot": "libs/section5/src",
       "prefix": "forms-course",
-      "architect": {
+      "targets": {
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
@@ -248,7 +254,7 @@
       "root": "libs/section3",
       "sourceRoot": "libs/section3/src",
       "prefix": "forms-course",
-      "architect": {
+      "targets": {
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
@@ -279,7 +285,7 @@
       "root": "libs/section4",
       "sourceRoot": "libs/section4/src",
       "prefix": "forms-course",
-      "architect": {
+      "targets": {
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
@@ -310,7 +316,7 @@
       "root": "libs/section6",
       "sourceRoot": "libs/section6/src",
       "prefix": "forms-course",
-      "architect": {
+      "targets": {
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
