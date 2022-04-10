@@ -24,7 +24,7 @@ export class CodePreviewComponent implements AfterViewInit {
 
   ngAfterViewInit() {
     this.codeEl.nativeElement.innerHTML = prism.highlight(
-      this.fileToPreview.fileContents.trim(),
+      this.fileToPreview.fileContents.default.trim(),
       prism.languages[this.fileToPreview.language],
       this.fileToPreview.language
     );

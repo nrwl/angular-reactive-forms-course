@@ -1,7 +1,7 @@
 module.exports = {
   rules: [
     {
-      test: /\?raw$/,
+      test: /?raw$/,
       use: 'raw-loader'
     }
   ]
